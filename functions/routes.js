@@ -43,29 +43,4 @@ module.exports = function(app) {
         })
       );
   });
-
-  // Set up dogs JSON data for API
-  const dogs = require('./dogs.json');
-  const getDogsBasic = () => {
-    const dogsBasicArr = dogs.map(dog => {
-      return {
-        rank: dog.rank,
-        breed: dog.breed,
-        image: dog.image
-      }
-    });
-    return dogsBasicArr;
-  }
-
-  // GET dogs (public)
-  app.get('/api/dogs', (req, res) => {
-    res.send(getDogsBasic());
-  });
-
-  // GET dog details by rank (private)
-  app.get('/api/dog/:rank', jwtCheck, (req, res) => {
-    const rank = req.params.rank * 1;
-    const thisDog = dogs.find(dog => dog.rank === rank);
-    res.send(thisDog);
-  });
 };
