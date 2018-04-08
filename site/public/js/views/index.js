@@ -14,9 +14,10 @@
         if(!name || !email || !phone) return;
 
         if(!leadDal)
-			leadDal = new LeadDal();
-		
-        leadDal.saveLead(new Lead(name, email, new Date(), phone, password));
+            leadDal = new LeadDal();
+
+		leadDal.saveLead(new Lead(name, email, new Date(), phone));
+		window.location.href = "thankYou.html";
     }
 
     function initializePipzTracker(){

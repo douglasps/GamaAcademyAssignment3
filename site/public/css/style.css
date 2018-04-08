@@ -5,48 +5,118 @@
 #logoSection{
     padding-top: 20px;
     padding-bottom: 20px;
+}
 
+#logo{
+	width: 200px;
+}
+
+#navBar{
+	margin-left: 5%;
+	margin-right: 10%;
+	margin-top: 5%;
+    margin-bottom: 5%;		
+	border: none;
+	min-height: 80px;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 0;
+    margin-top: 6%;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+	border-radius: 0;
+    width: 6%;	
+}
+
+.navbar-brand {
+    float: left;
+    height: 100px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.navbar-default {
+	background-color: #fff;
+	background-image: none;
+	box-shadow: none;
+}
+
+#menuItens{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 5%;
+	line-height:5px;
+}
+
+#imgMenu{
+	width: 50px;
+}
+
+.itemMenu{
+	text-decoration: none;
+	color: #000;
 }
 
 #imgBackground{
-	background-image: url("../img/Landing-Page-Home-Background.jpg");
+	background-image: url("../img/Hero-Background-Mobile.jpg");
 	background-repeat: no-repeat;
     background-position: center;
 	background-size: cover;	
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#main-title{
+	margin-top:1%;
+	margin-bottom: 20%;
+	margin-left: 7%;
+	margin-right: 10%;
 }
 
 #textContent{
-	padding-bottom: 30px;
+	margin-left: 7%;
+	margin-right: 10%;	
 }
 
 .colorWord{
-	color: #00cca3;
+	color:#FFF;
 	font-weight: bold;  	
 }
 
+#btnTeste{ 
+	width: 100%;
+}
+
 .btnType{
-    padding: 15px;
+    background-color:#ff6a00;
 
-    background-color: #00cca3;
-
-    border-radius: 30px;
+    border-radius: none;
     border: 0px;
 
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: bold;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: ease-in-out 0.3s;
-    width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3x;
+	display: inline-block;
+
+	width: 100%;
+	padding-bottom: 4%;
+    padding-top: 4%;
+    padding-left: 6%;
+	padding-right: 6%;
 }
 
 .btnType:hover {
-  	background-color:#00b38f;
-  	padding: 15px;
+  	background-color:#ff6a00;
   	outline: none;
 }
 
@@ -58,32 +128,74 @@
   	outline: none;
 }
 
+#imgBtn{
+	width: 50px;
+}
+
 h1{
 	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
+	font-weight: bolder;
 	color: #00cca3;
-	font-size: 2.5em;
-	line-height: 40px;
+	font-size: 1.8em;
+	line-height: 30px;
+	margin-left: 0;
+	
 }
 
 h2{
 	font-family: 'Raleway', sans-serif;
-	color: #000;
-	font-size: 1.8em; 
-    line-height: 35px;	  
+	color: #FFF;
+	font-size: 1.4em; 
+	line-height: 30px;
+	margin-left: 0;	  
+}
+
+.titulo{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;	
+	font-size: 2em;
+	line-height: 40px;	
+	color: #000 !important;
+	margin-left: 0!important;
+}
+
+h3{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3em;
+	line-height: 25px;	
+	margin: 10%;
+	margin-left: 0;
+	margin-bottom: 5%;
+}
+
+.DivVerde{
+	color: #00cca3;
+	background-color: #00cca3;
+	height: 4px;
+	width: 120px;
+	margin-left: 0;
+	margin-top: 5px;
+}
+
+#imgQuemSomos{
+	width: 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: cover;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top:30px;
+	margin-bottom: 20px;
 }
 
 #formQuestions{
-	padding-top: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	max-width: 100%;	
 }
 
-#btnSummit{
-	margin-top: 20px;
-}
-
 .formControl{
-	width: 100%!important;
+	width: 100% !important;
 }
 
 .itemForm{
@@ -94,178 +206,27 @@ h2{
 	width: 20px;
 }
 
-#thanksNote{
-	text-align: center;
-	height: 100%;
-	padding-top: 60px;
+.itemMenu a:link, .itemMenu a:visited{
+	font-size: 1.8em;
+	color: #000 !important;
 }
 
-.iconCompany:before{
-    content: "";
-    display: block;	
-	background: url("../img/offices-buildings.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
+.confLogoFooter1{
+	width: 200px;
 }
 
-.iconTarget:before{
-    content: "";
-    display: block;	
-	background: url("../img/target.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
+.confLogoFooter2{
+	width: 50px;
 }
 
-
-.iconBusiness:before{
-    content: "";
-    display: block;	
-	background: url("../img/businessman.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
+.main-footer{
+	display:flex;
+	justify-content: space-between;
+	background-color: #f9f9f9;
+	padding: 5%;
 }
-
-.iconHandShake:before{
-    content: "";
-    display: block;	
-	background: url("../img/handshake.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconPuzzle:before{
-    content: "";
-    display: block;	
-	background: url("../img/puzzle-piece.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconTools:before{
-    content: "";
-    display: block;	
-	background: url("../img/settings-symbol-of-a-cross-of-tools.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconWallet:before{
-    content: "";
-    display: block;	
-	background: url("../img/wallet-filled-money-tool.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconMedal:before{
-    content: "";
-    display: block;	
-	background: url("../img/medal-of-award.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconPaper:before{
-    content: "";
-    display: block;	
-	background: url("../img/verified-text-paper.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-.iconUpDown:before{
-    content: "";
-    display: block;	
-	background: url("../img/up-and-down-opposite-arrows-symbol-side-by-side.png") no-repeat;
-    background-size: 18px 18px;	
-	width: 20px;
-	height: 20px;
-    float: left;
-    margin: 0;	
-}
-
-
 /*Mobile Style*/
-@media only screen and (max-device-width: 992px){
 
-	#imgBackground{
-		padding-top: 20px;
-	}
+@media(max-with: 768px){	
 
-	h1{
-		font-size: 1.5em;
-	}
-
-	h2{
-		font-size: 1.2em;
-	}
-	.btnType{
-		margin-bottom: 20px;
-	}
-
-	body{
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-
-}
-
-@media only screen and (max-device-width: 378px){
-	h1{
-		font-size: 1.4em;
-	}
-
-	h2{
-		font-size: 1.1em;
-	}
-
-	body{
-		padding-left: 5px;
-		padding-right: 5px;
-	}	
-	#logo{
-		width: 85%;
-	}
-}
-
-@media only screen and (max-device-width: 320px){
-		h1{
-		font-size: 1.2em;
-	}
-
-	h2{
-		font-size: 0.8em;
-	}
-
-	body{
-		padding-left: 5px;
-		padding-right: 5px;
-	}	
 }
