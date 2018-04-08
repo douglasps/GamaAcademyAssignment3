@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "hustler-s-league",
-    "prod": "hustler-s-league-dev"
+    "default": "hustler-s-league"
   }
 }

@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "lint": "nodec lint"
+    "build": "node build",
+    "lint": "node lint"
   },
   "license": "MIT",
   "dependencies": {
