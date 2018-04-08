@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../auth/auth.service';
+import { AuthToken } from '../../auth/auth.token';
+import { AuthGuard } from '../../auth/auth.guard';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,9 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class HeaderComponent {
 
-  constructor(public auth: AuthService) {}
+  constructor(private token: AuthToken, private guard: AuthGuard) {}
 
+  logout(){
+    this.guard.logout();
+  }
 }

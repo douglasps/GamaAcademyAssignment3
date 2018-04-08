@@ -5,6 +5,7 @@ import { ApiService } from '../../core/api.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
+import { QuestionList } from '../../core/questionList';
 import { Question } from '../../core/question';
 
 @Component({
@@ -12,11 +13,11 @@ import { Question } from '../../core/question';
   templateUrl: './technical-test.component.html',
   styleUrls: ['./technical-test.component.css']
 })
-export class TechnicalTestComponent implements OnInit, OnDestroy {
+export class TechnicalTestComponent implements OnInit {
   paramSub: Subscription;
   loading = true;
   error: boolean;
-  questions$: Observable<Question[]>;
+  questionList: QuestionList;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,15 +26,7 @@ export class TechnicalTestComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.paramSub = this.route.params
-      .subscribe(
-        params => {
-          this.questions$ = this.api.getQuestions$().pipe(
-            tap(val => this._onNext(val)),
-            catchError((err, caught) => this._onError(err, caught))
-          );
-        }
-      );
+    this.questionList = this.api.getQuestions$();
   }
 
   private _onNext(val: Question[]) {
@@ -57,8 +50,22 @@ export class TechnicalTestComponent implements OnInit, OnDestroy {
     return `url(${url})`;
   }
 
-  ngOnDestroy() {
-    this.paramSub.unsubscribe();
-  }
+  submiteTechnicalTest(){
+    let valid = true;
+    this.questionList.questions.forEach(q =>{
+      if(q.selectionedOption == -1)
+      {
+        q.style = 'required';
+        valid = false;
+      }
+      else
+        q.style = '';
+    });
 
+    if(valid){
+      var score = this.questionList.calculateScore();
+      alert(score.message);
+      this.api.saveQuestions();
+    }
+  }
 }

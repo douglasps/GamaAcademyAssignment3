@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ApiService } from './api.service';
 import { LoadingComponent } from './loading.component';
 import { ErrorComponent } from './error.component';
+import { AuthToken } from '../auth/auth.token';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ export class CoreModule {
       providers: [
         Title,
         DatePipe,
-        ApiService
+        ApiService,
+        AuthToken
       ]
     };
   }

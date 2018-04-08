@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { TechnicalTestComponent } from './technical-test/technical-test.component';
+import { RadioGroupComponent } from '../radio-group/radio-group/radio-group.component';
+import { RadioComponent } from '../radio/radio/radio.component';
 
 const TECHNICALTEST_ROUTES: Routes = [
   {
@@ -18,7 +20,9 @@ const TECHNICALTEST_ROUTES: Routes = [
     RouterModule.forChild(TECHNICALTEST_ROUTES)
   ],
   declarations: [
-    TechnicalTestComponent
+    TechnicalTestComponent,
+    RadioGroupComponent,
+    RadioComponent
   ]
 })
 export class TechnicalTestModule { }

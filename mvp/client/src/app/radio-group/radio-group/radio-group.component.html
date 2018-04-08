@@ -1,0 +1,4 @@
+<h2>{{ number + ') ' + question.question }}</h2>
+<div [class]="question.style">
+</div>
+<app-radio *ngFor="let option of question.options" [option]="option" (selected)="selectedChanged($event)" class="d-block"></app-radio>

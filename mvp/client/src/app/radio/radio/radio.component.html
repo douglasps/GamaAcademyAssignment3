@@ -1,0 +1,8 @@
+<label>
+        <input type='radio' 
+            #myRadio
+            [name]="option.group"  
+            [value]="option.value"
+            (click)="onRadioClicked(myRadio)">
+    {{option.text}}
+</label>

@@ -8,14 +8,15 @@
     function saveInfo(){
         var name = $('input[name="contact.name"]').val();
         var email = $('input[name="contact.email"]').val();
-        var phone = $('input[name="contact.phone"]').val();
+		var phone = $('input[name="contact.phone"]').val();
+		var password = $('input[name="contact.custom_attributes__senha"]').val();
 
         if(!name || !email || !phone) return;
 
         if(!leadDal)
-            leadDal = new LeadDal();
-
-        leadDal.saveLead(new Lead(name, email, new Date(), phone));
+			leadDal = new LeadDal();
+		
+        leadDal.saveLead(new Lead(name, email, new Date(), phone, password));
     }
 
     function initializePipzTracker(){
@@ -61,7 +62,10 @@
 						var script=document.createElement('script');
 						script.id="pipz_script_07277e19"+vid;
 						script.innerHTML=result.script;
-                        document.head.appendChild(script);
+						document.head.appendChild(script);
+						
+						var password = Math.random().toString(36).slice(-8);
+						$('input[name="contact.custom_attributes__senha"]').val(password);
                         
                         $('.pipz-button').click(() =>{
                             saveInfo(); 

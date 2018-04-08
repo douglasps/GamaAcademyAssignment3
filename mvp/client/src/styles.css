@@ -12,3 +12,18 @@ a.text-primary:hover {
   color: #025aa5;
   text-decoration: underline !important;
 }
+
+.img-cadencia{
+  background-image: url('assets/images/img-cadencia.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;	
+  width: 400px;
+  height: 144px;
+}
+
+.required::before {
+  content: "* Por favor selecione uma opção";
+  padding-right: 8px;
+  color: red;
+}

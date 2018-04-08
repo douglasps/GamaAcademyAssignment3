@@ -1,9 +1,10 @@
 class Lead{
-    constructor(fullName, email, datetime, phone){
+    constructor(fullName, email, datetime, phone, password){
         this._fullName = fullName;
         this._email = email;
         this._datetime = typeof datetime == "Date" ? datetime : new Date(datetime);
         this._phone = phone;
+        this._password = password;
         Object.freeze(this);
     }
 
@@ -21,5 +22,9 @@ class Lead{
 
     get phone(){
         return this._phone;
+    }
+
+    get password(){
+        return this._password;
     }
 }
