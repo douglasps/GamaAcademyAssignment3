@@ -1,3 +1,9 @@
+.row{
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
 #nameEmailInfo, #btnSummit{
 	display: none;
 }
