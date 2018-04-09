@@ -328,7 +328,7 @@ h3{
 	}
 }
 
-@media only screen and (max-device-width: 320px){
+@media only screen and (max-device-width: 400px){
 	h1{
 		font-size: 1.4em;
 	}
