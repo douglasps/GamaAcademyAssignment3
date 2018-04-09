@@ -16,8 +16,7 @@
         if(!leadDal)
             leadDal = new LeadDal();
 
-		leadDal.saveLead(new Lead(name, email, new Date(), phone));
-		window.location.href = "thankyou.html";
+		leadDal.saveLead(new Lead(name, email, new Date(), phone, password));
     }
 
     function initializePipzTracker(){
