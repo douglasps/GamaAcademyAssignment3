@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ApiService } from '../../core/api.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -22,7 +22,8 @@ export class TechnicalTestComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    private title: Title
+    private title: Title,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -66,6 +67,7 @@ export class TechnicalTestComponent implements OnInit {
       var score = this.questionList.calculateScore();
       alert(score.message);
       this.api.saveQuestions();
+      this.router.navigateByUrl('thankyou');
     }
   }
 }

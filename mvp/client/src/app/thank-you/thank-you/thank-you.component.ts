@@ -11,11 +11,11 @@ import {NgForm} from '@angular/forms';
 import { AuthGuard } from '../../auth/auth.guard';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-thank-you',
+  templateUrl: './thank-you.component.html',
+  styleUrls: ['./thank-you.component.css']
 })
-export class HomeComponent{
+export class ThankYouComponent{
   paramSub: Subscription;
   loading = true;
   error: boolean;
