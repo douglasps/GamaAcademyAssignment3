@@ -150,7 +150,7 @@ h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
 	color: #00cca3;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	line-height: 30px;
 	margin-left: 0;
 }
@@ -240,7 +240,6 @@ h3{
 }
 
 #gif{
-	width: 80%;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -326,5 +325,11 @@ h3{
 		width: 100%;
 		text-align: center;
 		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-device-width: 320px){
+	h1{
+		font-size: 1.4em;
 	}
 }
