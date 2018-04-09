@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
-import { HomeComponent } from './home/home.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
-const HOME_ROUTES: Routes = [
+const THANKYOU_ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: ThankYouComponent
   }
 ];
 
@@ -15,10 +15,10 @@ const HOME_ROUTES: Routes = [
   imports: [
     CommonModule,
     CoreModule,
-    RouterModule.forChild(HOME_ROUTES)
+    RouterModule.forChild(THANKYOU_ROUTES)
   ],
   declarations: [
-    HomeComponent
+    ThankYouComponent
   ]
 })
-export class HomeModule { }
+export class ThankYouModule { }
