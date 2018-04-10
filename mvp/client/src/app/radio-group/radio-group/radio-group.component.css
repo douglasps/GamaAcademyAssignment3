@@ -1,0 +1,16 @@
+row{
+    margin-left:0;
+    margin-right: 0;
+}
+
+#confBox{
+    border: none;
+    box-shadow: 0 0 23px -5px black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.col-md-6{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
