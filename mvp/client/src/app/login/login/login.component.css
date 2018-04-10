@@ -27,7 +27,7 @@ row{
 
 #login{
     color: white;
-    font-size: 30px;
+    font-size: 1.5em;
     text-align: end;
     font-family: Arial;
     vertical-align: middle;
@@ -45,21 +45,56 @@ row{
     margin: 10%;
     width: 40%;
     box-shadow: 0 0 23px -5px black;
+    border-radius: 4px;
 }
 
 h4{
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     margin-top: 5%;
     text-align: center;
 }
 
-.btn-primary{
+.btn-primary{   
     background-color: #8dda8d;
     border: none;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 3x;
+
+	width: 100%;
+	padding-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 10%;
+	padding-right: 10%;
     margin-top: 5%;
-    padding-left: 40%;
-    padding-right: 40%;
+}
+
+#btnSubmit:hover {
+	background-color:#8dda8d;
+	color: #fff;
+	outline: none;	
+    text-decoration: none;	 
+    border:none;	       
+}
+
+#btnSubmit:active {
+	outline: none;
+    text-decoration: none;
+    border:none;
+    box-shadow: none;	  
+}
+
+#btnSubmit:focus {
+	outline: none;
+    text-decoration: none;
+    border:none;	
+    box-shadow: none;	          
 }
 
 #sectionForm{

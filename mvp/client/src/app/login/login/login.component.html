@@ -1,13 +1,13 @@
 <div id="header">
     <ul id="headerAlign" class="container">
-        <img src="img/logo-svg-branca.svg" id="logo">
+        <img src="img/logo-branca.png" id="logo">
         <h2 id="login">Login</h2>
     </ul>
 </div>
 
 <body>
     <div id="ImageBack">
-        <div id="sectionForm" class="row">
+        <div id="sectionForm">
             <div class="boxLogin container">
                 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                     <div class="form-group">
@@ -20,7 +20,11 @@
                         <input type="password" [(ngModel)]="model.password" #password="ngModel" name="password"
                         class="form-control" id="password" placeholder="Senha" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>       
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="btnSubmit" type="submit" class="btn btn-primary">Entrar</button>                              
+                        </div>                            
+                    </div>
                     <div>
                         <h4>Já cadastrou o seu email?<a href="https://hrtechsolutions.com.br/"> Não</a></h4>
                     </div>                                
