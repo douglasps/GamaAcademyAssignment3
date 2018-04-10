@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { ApiService } from '../../core/api.service';
+import { ApiService, Option } from '../../core/api.service';
 import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
-import { Option } from '../../core/option';
+//import { Option } from '../../core/option';
 
 @Component({
   selector: 'app-radio',

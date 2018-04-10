@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 import { Lead } from './../core/lead';
 import { Question } from './../core/question';
 import { QuestionList } from './../core/questionList';
-import { Option } from './../core/option';
+//import { Option } from './../core/option';
 import { BaseDal } from './base-dal.service'
 
 @Injectable()
@@ -137,3 +137,15 @@ export class ApiService {
   }
 
 }
+
+export class Option {
+    text: string;
+    group: string;
+    value: number;
+  
+    constructor(text: string, value: number, group: string){
+      this.text = text;
+      this.value = value;
+      this.group = group;
+    }
+  }

@@ -19,6 +19,9 @@ const PROGRESSBAR_ROUTES: Routes = [
   ],
   declarations: [
     ProgressBarComponent
+  ],
+  exports: [
+    ProgressBarComponent
   ]
 })
 export class ProgressBarModule { }
