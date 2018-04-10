@@ -35,6 +35,10 @@ export class TechnicalTestComponent implements OnInit {
     this.position = this.questionList.questions.reduce((total, question)=> total+= (question.isFilled ? 1 : 0), 0);
   }
 
+  back(){
+    this.position -= 1;
+  }
+
   submiteTechnicalTest(){
     let valid = true;
     this.questionList.questions.forEach(q =>{
