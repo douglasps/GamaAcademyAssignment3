@@ -1,5 +1,9 @@
-<h1 class="text-center">Technical Test</h1>
+<app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>
 <form (submit)="submiteTechnicalTest()">
-<app-radio-group *ngFor="let question of questionList.questions; let i = index" [question]="question"  [number]="i+1"></app-radio-group>
-<button type="submit" class="btn btn-sucess">Enviar</button>
+    <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
+        [question]="question"  
+        [number]="i+1"
+        (selected)="selectionChanged()">
+    </app-radio-group>
+    <button type="submit" class="btn btn-sucess">Enviar</button>
 </form>

@@ -5,6 +5,7 @@ import { CoreModule } from '../core/core.module';
 import { TechnicalTestComponent } from './technical-test/technical-test.component';
 import { RadioGroupComponent } from '../radio-group/radio-group/radio-group.component';
 import { RadioComponent } from '../radio/radio/radio.component';
+import { ProgressBarComponent } from '../progress-bar/progress-bar/progress-bar.component';
 
 const TECHNICALTEST_ROUTES: Routes = [
   {
@@ -22,7 +23,8 @@ const TECHNICALTEST_ROUTES: Routes = [
   declarations: [
     TechnicalTestComponent,
     RadioGroupComponent,
-    RadioComponent
+    RadioComponent,
+    ProgressBarComponent
   ]
 })
 export class TechnicalTestModule { }
