@@ -15,6 +15,7 @@ import { AuthGuard } from '../../auth/auth.guard';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent{
   paramSub: Subscription;
   loading = true;
