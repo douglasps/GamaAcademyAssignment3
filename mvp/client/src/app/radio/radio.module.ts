@@ -19,6 +19,9 @@ const RADIO_ROUTES: Routes = [
   ],
   declarations: [
     RadioComponent
+  ],
+  exports: [
+    RadioComponent
   ]
 })
 export class RadioModule { }

@@ -25,6 +25,7 @@ export class ProgressBarComponent {
   ) { }
 
   getPositions(){
-    return new Array(this.position + 1);
+    let count = this.position < this.total ? this.position + 1 : this.total;
+    return new Array(count);
   }
 }

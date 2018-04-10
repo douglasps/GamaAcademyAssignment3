@@ -4,11 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -16,6 +15,6 @@ import { LoginComponent } from './login/login/login.component';
     AuthModule.forRoot(),
     CoreModule.forRoot(),
   ],
-  bootstrap: [AppComponent, LoginComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

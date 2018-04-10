@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
 import { QuestionList } from '../../core/questionList';
 import { Question } from '../../core/question';
-import {NgForm} from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { AuthGuard } from '../../auth/auth.guard';
 
 @Component({

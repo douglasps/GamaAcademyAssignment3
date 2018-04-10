@@ -27,6 +27,10 @@ export class TechnicalTestComponent implements OnInit {
     private router: Router
   ) { }
 
+  groupVisible(i){
+    return i == this.position;
+  }
+
   ngOnInit() {
     this.questionList = this.api.getQuestions$();
   }

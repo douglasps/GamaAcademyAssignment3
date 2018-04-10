@@ -1,0 +1,14 @@
+.questions{
+    display: flex;
+}
+
+.question, .options{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+}
+
+.options{
+    padding: 20px;
+    border: solid 1px black;
+}
