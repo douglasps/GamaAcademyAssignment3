@@ -16,12 +16,7 @@ const PROGRESSBAR_ROUTES: Routes = [
     CommonModule,
     CoreModule,
     RouterModule.forChild(PROGRESSBAR_ROUTES)
-  ],
-  declarations: [
-    ProgressBarComponent
-  ],
-  exports: [
-    ProgressBarComponent
   ]
 })
-export class ProgressBarModule { }
+export class ProgressBarModule { 
+}

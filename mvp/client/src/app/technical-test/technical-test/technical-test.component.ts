@@ -1,10 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Title } from '@angular/platform-browser';
 import { ApiService } from '../../core/api.service';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
-import { tap, catchError } from 'rxjs/operators';
 import { QuestionList } from '../../core/questionList';
 import { Question } from '../../core/question';
 
@@ -14,18 +10,16 @@ import { Question } from '../../core/question';
   styleUrls: ['./technical-test.component.css']
 })
 export class TechnicalTestComponent implements OnInit {
-  paramSub: Subscription;
-  loading = true;
-  error: boolean;
   questionList: QuestionList;
   position:  number = 0;
 
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    private title: Title,
     private router: Router
-  ) { }
+  ) { 
+    this.questionList = this.api.getQuestions$();
+  }
 
   groupVisible(i){
     return i == this.position;
@@ -43,7 +37,8 @@ export class TechnicalTestComponent implements OnInit {
     this.position -= 1;
   }
 
-  submiteTechnicalTest(){
+  submiteTechnicalTest(event){
+    event.preventDefault();
     let valid = true;
     this.questionList.questions.forEach(q =>{
       if(q.selectionedOption == -1)

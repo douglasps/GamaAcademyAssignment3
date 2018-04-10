@@ -3,9 +3,8 @@
         <div class="text-back" (click)="back()">VOLTAR</div>
     </div>
 </ng-template>
-
-<app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>
-<form (submit)="submiteTechnicalTest()">
+  <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
+<form (submit)="submiteTechnicalTest($event)">
     <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
         [question]="question"  
         [number]="i+1"
@@ -14,36 +13,36 @@
     </app-radio-group>
 
     <ng-template [ngIf]="position == questionList.questions.length">
-      <div style="
+        <div style="
         max-width: 470px;
         display: inline-block;
         margin:  auto;
-        margin:  0 20px;
-    "><img src="https://i.imgur.com/A3n1cOA.jpg" style="
-        width:  100%;
-    "></div><h2 style="
+        margin:  0 20px;">
+            <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:  100%;">
+        </div>
+        <h2 style="
         width: fit-content;
         margin:  auto;
         padding: 10px 40px;
         box-shadow: inset 0px 0px 21px -7px black;
         font-size:  16px;
-        display:  inline-block;
-    "><div style="
+        display:  inline-block;">
+        <div style="
         display: inline-block;
         vertical-align: middle;
         padding: 10px 60px 10px 0px;
         text-align: right;
-        max-width: 320px;
-    ">Pronto! Agradecemos pela participação e até em breve.</div><div style="
+        max-width: 320px;">
+            Pronto! Agradecemos pela participação e até em breve.
+        </div>
+        <div style="
         display: inline-block;
         vertical-align:  middle;
         width:  110px;
-        margin:  auto;
-    
-        ">
-    <button _ngcontent-c1="" class="btn btn-sucess" type="submit" style="padding: 5px 30px;background-color: #41ffae;color: white;font-weight: 600;">Enviar</button></div></h2><div style="
+        margin:  auto;">
+        <button class="btn btn-sucess" type="submit" style="padding: 5px 30px;background-color: #41ffae;color: white;font-weight: 600;">Enviar</button></div></h2><div style="
         width:  300px;
-        height: 220px;
-    "></div>
+        height: 220px;">
+        </div>
     </ng-template>
 </form>

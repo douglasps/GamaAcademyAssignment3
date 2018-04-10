@@ -3,13 +3,25 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { TechnicalTestComponent } from './technical-test/technical-test.component';
-import { ProgressBarModule } from '../progress-bar/progress-bar.module';
-import { RadioGroupModule } from '../radio-group/radio-group.module';
+
+import { RadioComponent } from '../radio/radio/radio.component';
+import { RadioGroupComponent } from '../radio-group/radio-group/radio-group.component';
+import { ProgressBarComponent } from '../progress-bar/progress-bar/progress-bar.component';
 
 const TECHNICALTEST_ROUTES: Routes = [
   {
     path: '',
-    component: TechnicalTestComponent
+    component: TechnicalTestComponent,
+    children: [
+      { 
+        path: '', 
+        component: RadioGroupComponent
+      },
+      {
+        path: '',
+        component: ProgressBarComponent
+      }
+    ]
   }
 ];
 
@@ -17,15 +29,14 @@ const TECHNICALTEST_ROUTES: Routes = [
   imports: [
     CommonModule,
     CoreModule,
-    ProgressBarModule,
-    RadioGroupModule,
     RouterModule.forChild(TECHNICALTEST_ROUTES),
   ],
   declarations: [
-    TechnicalTestComponent
-  ],
-  exports: [
-    TechnicalTestComponent
+    TechnicalTestComponent,
+    RadioGroupComponent,
+    RadioComponent,
+    ProgressBarComponent
   ]
 })
-export class TechnicalTestModule { }
+export class TechnicalTestModule {
+ }

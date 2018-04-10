@@ -17,6 +17,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './technical-test/technical-test.module#TechnicalTestModule',
+    pathMatch: 'full',
     canActivate: [
       AuthGuard
     ]

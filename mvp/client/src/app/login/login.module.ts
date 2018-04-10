@@ -21,9 +21,6 @@ const LOGIN_ROUTES: Routes = [
   ],
   declarations: [
     LoginComponent
-  ],
-  exports:[
-    LoginComponent,
   ]
 })
 export class LoginModule { }

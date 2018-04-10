@@ -16,12 +16,7 @@ const RADIO_ROUTES: Routes = [
     CommonModule,
     CoreModule,
     RouterModule.forChild(RADIO_ROUTES)
-  ],
-  declarations: [
-    RadioComponent
-  ],
-  exports: [
-    RadioComponent
   ]
 })
-export class RadioModule { }
+export class RadioModule { 
+}
