@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ApiService } from '../../core/api.service';
@@ -18,6 +18,7 @@ export class RadioGroupComponent {
   error: boolean;
   @Input() question: Question;
   @Input() number: number;
+  @Output() selected: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(
     private route: ActivatedRoute,
@@ -31,5 +32,6 @@ export class RadioGroupComponent {
 
   selectedChanged(event){
     this.question.selectionedOption = event;
+    this.selected.emit(event);
   }
 }

@@ -13,4 +13,8 @@ export class Question {
     this.options = options;
     this.style = style;
   }
+
+  get isFilled(): boolean{
+    return this.selectionedOption > -1;
+  }
 }

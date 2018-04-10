@@ -18,6 +18,7 @@ export class TechnicalTestComponent implements OnInit {
   loading = true;
   error: boolean;
   questionList: QuestionList;
+  position:  number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,25 +31,8 @@ export class TechnicalTestComponent implements OnInit {
     this.questionList = this.api.getQuestions$();
   }
 
-  private _onNext(val: Question[]) {
-    this.loading = false;
-  }
-
-  private _onError(err, caught): Observable<any> {
-    this.loading = false;
-    this.error = true;
-    return Observable.throw('An error occurred fetching detail data for this dog.');
-  }
-
-  getPageTitle(question: Question[]): string {
-    //const pageTitle = `#${question.question}: ${question.answer}`;
-    //this.title.setTitle(pageTitle);
-    //return pageTitle;
-    return this.title.getTitle();
-  }
-
-  getImgStyle(url: string) {
-    return `url(${url})`;
+  selectionChanged(){
+    this.position = this.questionList.questions.reduce((total, question)=> total+= (question.isFilled ? 1 : 0), 0);
   }
 
   submiteTechnicalTest(){
