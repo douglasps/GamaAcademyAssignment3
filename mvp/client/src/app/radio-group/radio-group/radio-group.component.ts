@@ -18,6 +18,7 @@ export class RadioGroupComponent {
   error: boolean;
   @Input() question: Question;
   @Input() number: number;
+  @Input() visible: boolean;
   @Output() selected: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(
@@ -25,10 +26,6 @@ export class RadioGroupComponent {
     private api: ApiService,
     private title: Title
   ) { }
-
-  getImgStyle(url: string) {
-    return `url(${url})`;
-  }
 
   selectedChanged(event){
     this.question.selectionedOption = event;

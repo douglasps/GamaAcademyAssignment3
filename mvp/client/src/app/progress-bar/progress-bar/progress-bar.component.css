@@ -1,20 +1,3 @@
-.btn-back{
-    display:  inline-block;
-    vertical-align: middle;
-    width: 10%;
-}
-
-.btn-back .text-back{
-    height: 30px;
-    width: 100%;
-    background-color: #bd2130;
-    border-radius: 5px;
-    text-align: center;
-    color:  white;
-    font-weight:  600;
-    padding-top: 3px;
-}
-
 .progress-bar{
     display: inline-block;
     vertical-align: middle;
