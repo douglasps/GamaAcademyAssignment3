@@ -4,17 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule.forRoot(),
-    CoreModule.forRoot()
+    CoreModule.forRoot(),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, LoginComponent]
 })
 export class AppModule { }

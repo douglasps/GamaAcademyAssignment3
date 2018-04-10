@@ -1,0 +1,68 @@
+body{
+    height: 80%;
+}
+
+row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#header{
+    background-color: #000;
+    justify-content: space-around;   
+    height: 8%;
+    padding-top: 2%
+}
+
+#headerAlign{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    justify-content: start;
+	background-repeat: no-repeat;
+    background-position: center;   
+}
+
+#login{
+    color: white;
+    font-size: 30px;
+    text-align: end;
+    font-family: Arial;
+    vertical-align: middle;
+
+}
+#ImageBack{
+    background-image: url("../img/login-bg.jpg");
+    min-height: 80%;
+    width: 100%;
+}
+
+.boxLogin{
+    background-color: white;
+    padding: 3%;
+    margin: 10%;
+    width: 40%;
+    box-shadow: 0 0 23px -5px black;
+}
+
+h4{
+    font-family: Arial;
+    font-size: 1em;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #8dda8d;
+    border: none;
+    margin-top: 5%;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+#sectionForm{
+    display: flex;
+    justify-content: space-around;
+}
