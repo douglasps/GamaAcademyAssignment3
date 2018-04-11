@@ -80,9 +80,6 @@
     flex-flow: row;
 }
 
-#msgScore{
-    margin-top: 4%;
-}
 @media only screen and (max-device-width: 768px) {
     .message-container{
         flex-flow: column;
