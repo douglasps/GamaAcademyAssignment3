@@ -22,12 +22,16 @@
                 (selected)="selectionChanged()">
             </app-radio-group>
         
+            <div id="msgScore" class="row container">
+                <label id="scoreMessage"></label>
+            </div>
+
             <ng-template [ngIf]="position == questionList.questions.length">
                 <div class="message-container">
                     <div class="thanks-img">
-                        <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:  100%;">
+                        <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:100%;">
                     </div>
-                    
+                
                     <div class="container thanks-title">
                         <div class="row">
                             <div class="col-md-8">

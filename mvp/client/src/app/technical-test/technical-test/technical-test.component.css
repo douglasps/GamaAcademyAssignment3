@@ -1,4 +1,4 @@
-row{
+.row{
     margin-left: 0;
     margin-right: 0;
 }
@@ -71,7 +71,7 @@ row{
 }
 
 .thanks-btn{
-    padding: 5px 30px;background-color: #41ffae;color: white;font-weight: 600;
+    padding: 5px 30px;background-color: #8dda8d; color: white;font-weight: 600;
 }
 
 .message-container{
@@ -80,6 +80,9 @@ row{
     flex-flow: row;
 }
 
+#msgScore{
+    margin-top: 4%;
+}
 @media only screen and (max-device-width: 768px) {
     .message-container{
         flex-flow: column;
