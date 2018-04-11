@@ -24,8 +24,8 @@ export class Score{
     constructor(score: number, total: number){
         this.score = score;
         let level = this.getLevel(score);
-        this.message = `<h4>O seu nível é "${ level }" (${score}/${total})</h4><br/>
-        <h5>${ this.getMessage(score) }</h5>`
+        this.message = `O seu nível é "${ level }" (${score}/${total}) ! 
+        ${ this.getMessage(score) }`
     }
 
     private getLevel(score: number) : string{

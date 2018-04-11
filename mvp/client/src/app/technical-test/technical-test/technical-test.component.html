@@ -21,10 +21,6 @@
                 [visible]="groupVisible(i)"
                 (selected)="selectionChanged()">
             </app-radio-group>
-        
-            <div id="msgScore" class="row container">
-                <label id="scoreMessage"></label>
-            </div>
 
             <ng-template [ngIf]="position == questionList.questions.length">
                 <div class="message-container">

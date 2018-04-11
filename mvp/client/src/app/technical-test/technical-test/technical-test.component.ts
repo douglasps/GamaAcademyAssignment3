@@ -38,7 +38,6 @@ export class TechnicalTestComponent implements OnInit {
     this.position -= 1;
   }
 
-
   submiteTechnicalTest(event){
     event.preventDefault();
     let valid = true;
@@ -53,9 +52,6 @@ export class TechnicalTestComponent implements OnInit {
     });
 
     if(valid){
-      var score = this.questionList.calculateScore();
-      alert(score.message);
-      //document.querySelector('#scoreMessage').innerHTML = (score.message);
       this.api.saveQuestions();     
       this.router.navigateByUrl('thankyou');
     }

@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ApiService } from '../../core/api.service';
@@ -20,15 +20,19 @@ export class ThankYouComponent{
   loading = true;
   error: boolean;
   model;
+  questionList: QuestionList;
+  message: string;
 
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
     private title: Title,
     public auth: AuthGuard,
-    private router: Router
+    private router: Router,
   ) { 
-    
+    this.questionList = this.api.getQuestions$();
+    var score = this.questionList.calculateScore();
+    this.message = (score.message);
   }
 
   getPageTitle(): string {

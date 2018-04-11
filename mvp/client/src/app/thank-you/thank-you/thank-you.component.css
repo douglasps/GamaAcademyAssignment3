@@ -22,30 +22,54 @@ h1{
 	color: #00cca3;
 	font-size: 1.5em;
 	line-height: 30px;
-	margin: 2%;
+	text-align: left;
 }
 
 h2{
 	font-family: 'Raleway', sans-serif;
-	color: #FFF;
+	color: #000;
 	font-size: 1.3em; 
 	line-height: 30px;
-	margin-left: 0;	  
+	text-align: left;	  
 }
 
 h3{
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.4em;
 	line-height: 25px;	
-	margin: 2%;
+	text-align: left;	
 }
 
 #gif{
-	width: fit-content;
-	text-align: center;
+	float: left;
 	margin-bottom: 20px;
 	flex-shrink: 1;
 }
+
+#backHomePage{
+	border: solid 2px #00cca3;
+	color: #00cca3;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+section{
+	margin-bottom: 5%;
+}
+.MarginTop{
+	margin-top: 5%;
+}
+
+#msgScore{
+	margin-top: 4%;
+	margin-bottom: 4%;
+	width: 100%;
+	border: solid 1px lightgrey;
+	border-radius: 5px;
+	padding: 10px; 
+}
+
 
 /*Mobile Style*/
 
@@ -70,11 +94,5 @@ h3{
 	
 	h3{
 		font-size:1.5em;
-	}
-
-	#gif{
-		width: 100%;
-		text-align: center;
-		margin-bottom: 20px;
 	}
 }
