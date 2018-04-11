@@ -3,7 +3,7 @@
         <h2>{{ number + ') ' + question.question }}</h2>
         <div [class]="question.style"></div>
     </div>
-    <div class="options">
+    <div class="options radio-group-container">
         <app-radio *ngFor="let option of question.options" 
             [option]="option" 
             (selected)="selectedChanged($event)" 

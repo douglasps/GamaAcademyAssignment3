@@ -1,14 +1,32 @@
 .questions{
     display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .question, .options{
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
-.options{
-    padding: 20px;
-    border: solid 1px black;
+.question{
+    width: 60%;
+}
+
+.radio-group-container{
+    margin:  auto;
+    box-shadow: inset 0px 0px 21px -7px black;
+    font-size:  16px;
+    display:  inline-block;
+    width: 40%;
+}
+
+@media(max-width: 768px) {
+    .questions{
+        flex-direction: column;
+    }
+    
+    .question, .options{
+        width: 100%;
+    }
 }
