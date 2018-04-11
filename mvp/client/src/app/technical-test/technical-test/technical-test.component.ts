@@ -38,7 +38,6 @@ export class TechnicalTestComponent implements OnInit {
     this.position -= 1;
   }
 
-
   submiteTechnicalTest(event){
     event.preventDefault();
     let valid = true;

@@ -47,7 +47,7 @@
 
 .container-questions{
     display: flex;
-    height: 90%;
+    height: 70%;
     align-items: center;
     align-content: center;
     max-width: 1000px;
@@ -86,10 +86,6 @@
 @media only screen and (max-device-width: 768px) {
     .message-container{
         flex-flow: column;
-    }
-
-    .container-questions{
-        height: 70%;
     }
     
 }
