@@ -5,15 +5,7 @@ import { AuthGuard } from '../../auth/auth.guard';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styles: [`
-    img {
-      border-radius: 100px;
-      width: 30px;
-    }
-    .loading { line-height: 31px; }
-    .home-link { color: #212529; }
-    .home-link:hover { text-decoration: none; }
-  `]
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
 

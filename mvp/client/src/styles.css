@@ -18,8 +18,9 @@ a.text-primary:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;	
-  width: 400px;
-  height: 144px;
+  width: 370px;
+  height: 140px;
+  margin-bottom: 5px;
 }
 
 .required::before {

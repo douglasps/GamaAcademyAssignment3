@@ -1,48 +1,42 @@
-<ng-template [ngIf]="position > 0">
-    <div class="btn-back">
-        <div class="text-back" (click)="back()">VOLTAR</div>
+<div class="w-100 h-100 d-block">
+    <div class="top-container">
+        <div class="progress-container">
+            <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
+        </div>
+        <ng-template [ngIf]="position > 0">
+            <div class="btn-back">
+                <div class="text-back" (click)="back()">VOLTAR</div>
+            </div>
+        </ng-template>
     </div>
-</ng-template>
-  <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
-<form (submit)="submiteTechnicalTest($event)">
-    <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
-        [question]="question"  
-        [number]="i+1"
-        [visible]="groupVisible(i)"
-        (selected)="selectionChanged()">
-    </app-radio-group>
+    <div class="scheduled-time">Tempo previsto: 7:00 min</div>
+    <div class="container-questions">
+        <form (submit)="submiteTechnicalTest($event)" class="w-100">
+            <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
+                [question]="question"  
+                [number]="i+1"
+                [visible]="groupVisible(i)"
+                (selected)="selectionChanged()">
+            </app-radio-group>
+        
+            <ng-template [ngIf]="position == questionList.questions.length">
+                <div class="message-container">
+                    <div class="thanks-img">
+                        <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:  100%;">
+                    </div>
+                    <h2 class="thanks-title">
+                        <div class="thanks-title-container">
+                            Pronto! Agradecemos pela participação e até em breve.
+                        </div>
+                        <div class="thanks-btn-container">
+                            <button class="btn btn-sucess" type="submit" class="thanks-btn">
+                                Enviar
+                            </button>
+                        </div>
+                    </h2>
+                </div>
+            </ng-template>
+        </form>
+    </div>
 
-    <ng-template [ngIf]="position == questionList.questions.length">
-        <div style="
-        max-width: 470px;
-        display: inline-block;
-        margin:  auto;
-        margin:  0 20px;">
-            <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:  100%;">
-        </div>
-        <h2 style="
-        width: fit-content;
-        margin:  auto;
-        padding: 10px 40px;
-        box-shadow: inset 0px 0px 21px -7px black;
-        font-size:  16px;
-        display:  inline-block;">
-        <div style="
-        display: inline-block;
-        vertical-align: middle;
-        padding: 10px 60px 10px 0px;
-        text-align: right;
-        max-width: 320px;">
-            Pronto! Agradecemos pela participação e até em breve.
-        </div>
-        <div style="
-        display: inline-block;
-        vertical-align:  middle;
-        width:  110px;
-        margin:  auto;">
-        <button class="btn btn-sucess" type="submit" style="padding: 5px 30px;background-color: #41ffae;color: white;font-weight: 600;">Enviar</button></div></h2><div style="
-        width:  300px;
-        height: 220px;">
-        </div>
-    </ng-template>
-</form>
+</div>

@@ -1,11 +1,18 @@
+.radio-container{
+    background-color: #41ffae;
+    padding: 10px 10px 0 10px;
 .confLabel{
     background-color: #8dda8d;
     width: 94%;
     padding: 1%;
     border-radius: 5px;
+    margin: 20px;
+    color: #477162;
+    font-weight: 600;
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 1.7%;
     margin-bottom: 1.7%;
     border: none;
 }
+

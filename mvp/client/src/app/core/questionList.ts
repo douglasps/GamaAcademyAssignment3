@@ -23,10 +23,25 @@ export class Score{
 
     constructor(score: number, total: number){
         this.score = score;
-        let level = score > 9 ? 'Expert'
-            : score > 6 ? 'Avançado'
-            : score > 3 ? 'Intermediário'
+        let level = this.getLevel(score);
+        this.message = `O seu nível é "${ level }" (${score}/${total})
+        ${ this.getMessage(score) }`
+    }
+
+    private getLevel(score: number) : string{
+        return score > 9 ? 'Avançado'
+            : score > 6 ? 'Intermediário'
+            : score > 3 ? 'Básico'
             : 'Iniciante';
-        this.message = `O seu nível é "${ level }" (${score}/${total})`
+    }
+
+    private getMessage(score: number) : string{
+        if(score > 9)
+            return 'Segundo os resultados do formulário respondido, você se encaixa no nível avançado quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você já é um vendedor Inside sales!';
+        if(score > 6)
+            return 'Segundo os resultados do formulário respondido, você se encaixa no nível básico quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você está no caminho, precisa estudar mais sobre Inside sales!';
+        if(score > 3)
+            return 'Segundo os resultados do formulário respondido, você se encaixa no nível básico quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você tem pouca noção sobre Inside sales!';
+        return 'Segundo os resultados do formulário respondido, você se encaixa no nível iniciante quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você ainda sabe pouco sobre Inside sales!';
     }
 }
