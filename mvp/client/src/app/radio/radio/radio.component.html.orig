@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+<div id="boxConf">
+    <label class="confLabel">
+            <input type='radio' 
+                #myRadio
+                [name]="option.group"  
+                [value]="option.value"
+                (click)="onRadioClicked(myRadio)">
+        {{option.text}}
+    </label>
+</div>
+=======
+<label>
+         <input type='radio' 
+            #myRadio
+            [name]="option.group"  
+            [value]="option.value"
+            (click)="onRadioClicked(myRadio)">
+    {{option.text}} 
+</label>
+>>>>>>> master

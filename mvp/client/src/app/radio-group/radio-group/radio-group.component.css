@@ -1,14 +1,19 @@
 .questions{
-    display: flex;
+    margin-top: 15%;
 }
-
-.question, .options{
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 50%;
+.question{
+    vertical-align: middle;
 }
-
 .options{
     padding: 20px;
-    border: solid 1px black;
+    box-shadow: 0 0 23px -5px black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+@media only screen and (max-device-width: 768px){}
+
+.questions{
+    display: flex;
 }
