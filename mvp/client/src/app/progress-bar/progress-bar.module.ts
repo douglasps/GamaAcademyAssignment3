@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
-import { RadioComponent } from './radio/radio.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
-const RADIO_ROUTES: Routes = [
+const PROGRESSBAR_ROUTES: Routes = [
   {
     path: '',
-    component: RadioComponent
+    component: ProgressBarComponent
   }
 ];
 
@@ -15,8 +15,8 @@ const RADIO_ROUTES: Routes = [
   imports: [
     CommonModule,
     CoreModule,
-    RouterModule.forChild(RADIO_ROUTES)
+    RouterModule.forChild(PROGRESSBAR_ROUTES)
   ]
 })
-export class RadioModule { 
+export class ProgressBarModule { 
 }

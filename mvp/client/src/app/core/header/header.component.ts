@@ -17,7 +17,7 @@ import { AuthGuard } from '../../auth/auth.guard';
 })
 export class HeaderComponent {
 
-  constructor(private token: AuthToken, private guard: AuthGuard) {}
+  constructor(public token: AuthToken, private guard: AuthGuard) {}
 
   logout(){
     this.guard.logout();

@@ -1,0 +1,35 @@
+.progress-bar{
+    display: inline-block;
+    vertical-align: middle;
+    width: 87%;
+    background-color:  #efefef;
+    background: linear-gradient(141deg, white 0%, #4299F4 76%);
+    margin: 0 0 0 3%;
+    border-radius: 5px;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #dedede;
+    box-shadow: inset 0px 2px 30px -10px black;
+    text-align: left;
+}
+
+.progress-bar .progress-bar-item{
+    height: 30px;
+    width: 8.33%;
+    background-color: blueviolet;
+    background: linear-gradient(141deg, blueviolet 0%, #4299F4 76%);
+    transition: ease-in-out 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    color:  white;
+    padding-top: 3px;
+    font-weight:  900;
+    box-shadow: 2px 2px 12px 0px #000085;
+    display: inline-block;
+}
+
+.scheduled-time{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}

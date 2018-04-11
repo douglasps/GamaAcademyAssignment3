@@ -1,0 +1,78 @@
+.row{
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+#logoSection{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#logo{
+	width: 180px;
+}
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	color: #00cca3;
+	font-size: 1.8em;
+	line-height: 30px;
+	margin-left: 0;
+}
+
+h2{
+	font-family: 'Raleway', sans-serif;
+	color: #FFF;
+	font-size: 1.4em; 
+	line-height: 30px;
+	margin-left: 0;	  
+}
+
+h3{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.4em;
+	line-height: 25px;	
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5%;
+}
+
+#gif{
+	width: 80%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*Mobile Style*/
+
+@media only screen and (min-device-width: 768px){
+	#logo{
+		width: 220px;
+	}
+	
+	#imgBackground{
+		padding-bottom: 5%;
+		padding-top: 5%;
+	}
+
+	h1{
+		font-size: 3em;
+		line-height: 55px;
+	}
+
+	h2{
+		font-size:2em;
+	}
+	
+	h3{
+		font-size:1.5em;
+	}
+
+	#gif{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}

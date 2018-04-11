@@ -24,7 +24,6 @@ import { AuthToken } from '../auth/auth.token';
     ErrorComponent
   ],
   exports: [
-    FormsModule, // Export FormsModule so CommentsModule can use it
     HeaderComponent,
     LoadingComponent,
     ErrorComponent

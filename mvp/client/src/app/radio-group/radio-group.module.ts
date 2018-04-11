@@ -3,12 +3,20 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
+
 import { RadioComponent } from '../radio/radio/radio.component';
+import { RadioModule } from '../radio/radio.module';
 
 const RADIOGROUP_ROUTES: Routes = [
   {
     path: '',
-    component: RadioGroupComponent
+    component: RadioGroupComponent,
+    children:[
+      {
+        path: '', 
+        component: RadioComponent,
+      }
+    ]
   }
 ];
 
@@ -17,10 +25,7 @@ const RADIOGROUP_ROUTES: Routes = [
     CommonModule,
     CoreModule,
     RouterModule.forChild(RADIOGROUP_ROUTES)
-  ],
-  declarations: [
-    RadioGroupComponent,
-    RadioComponent
   ]
 })
-export class RadioGroupModule { }
+export class RadioGroupModule {
+ }

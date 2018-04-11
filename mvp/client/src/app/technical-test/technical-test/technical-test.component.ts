@@ -1,10 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../core/api.service';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
-import { tap, catchError } from 'rxjs/operators';
 import { QuestionList } from '../../core/questionList';
 import { Question } from '../../core/question';
 
@@ -14,43 +10,35 @@ import { Question } from '../../core/question';
   styleUrls: ['./technical-test.component.css']
 })
 export class TechnicalTestComponent implements OnInit {
-  paramSub: Subscription;
-  loading = true;
-  error: boolean;
   questionList: QuestionList;
+  position:  number = 0;
 
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    private title: Title
-  ) { }
+    private router: Router
+  ) { 
+    this.questionList = this.api.getQuestions$();
+  }
+
+  groupVisible(i){
+    return i == this.position;
+  }
 
   ngOnInit() {
     this.questionList = this.api.getQuestions$();
   }
 
-  private _onNext(val: Question[]) {
-    this.loading = false;
+  selectionChanged(){
+    this.position = this.questionList.questions.reduce((total, question)=> total+= (question.isFilled ? 1 : 0), 0);
   }
 
-  private _onError(err, caught): Observable<any> {
-    this.loading = false;
-    this.error = true;
-    return Observable.throw('An error occurred fetching detail data for this dog.');
+  back(){
+    this.position -= 1;
   }
 
-  getPageTitle(question: Question[]): string {
-    //const pageTitle = `#${question.question}: ${question.answer}`;
-    //this.title.setTitle(pageTitle);
-    //return pageTitle;
-    return this.title.getTitle();
-  }
-
-  getImgStyle(url: string) {
-    return `url(${url})`;
-  }
-
-  submiteTechnicalTest(){
+  submiteTechnicalTest(event){
+    event.preventDefault();
     let valid = true;
     this.questionList.questions.forEach(q =>{
       if(q.selectionedOption == -1)
@@ -66,6 +54,7 @@ export class TechnicalTestComponent implements OnInit {
       var score = this.questionList.calculateScore();
       alert(score.message);
       this.api.saveQuestions();
+      this.router.navigateByUrl('thankyou');
     }
   }
 }
