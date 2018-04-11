@@ -1,32 +1,19 @@
 .questions{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+    margin-top: 15%;
 }
-
-.question, .options{
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
 .question{
-    width: 60%;
+    vertical-align: middle;
+}
+.options{
+    padding: 20px;
+    box-shadow: 0 0 23px -5px black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1%;
 }
 
-.radio-group-container{
-    margin:  auto;
-    box-shadow: inset 0px 0px 21px -7px black;
-    font-size:  16px;
-    display:  inline-block;
-    width: 40%;
-}
+@media only screen and (max-device-width: 768px){}
 
-@media(max-width: 768px) {
-    .questions{
-        flex-direction: column;
-    }
-    
-    .question, .options{
-        width: 100%;
-    }
+.questions{
+    display: flex;
 }
