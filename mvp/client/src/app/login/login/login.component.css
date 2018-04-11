@@ -101,3 +101,35 @@ h4{
     display: flex;
     justify-content: space-around;
 }
+
+@media only screen and (max-device-width: 768px){
+    .boxLogin{
+        width: 70%;
+    }
+
+    .btn-primary{   
+        font-size: 1em;
+        font-weight:none;
+    }
+
+    body{
+        height: 100%;
+    }
+    
+    #ImageBack{
+        min-height: 100%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-device-width: 320px){
+    #ImageBack{
+        min-height: 100%;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .boxLogin{
+        width: 80%;
+    }
+}
