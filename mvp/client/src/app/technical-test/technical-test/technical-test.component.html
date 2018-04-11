@@ -1,5 +1,6 @@
 <div class="w-100 h-100 d-block">
     <div class="top-container">
+
         <div class="progress-container">
             <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
         </div>
@@ -9,7 +10,9 @@
             </div>
         </ng-template>
     </div>
+
     <div class="scheduled-time">Tempo previsto: 7:00 min</div>
+
     <div class="container-questions">
         <form (submit)="submiteTechnicalTest($event)" class="w-100">
             <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
@@ -24,16 +27,19 @@
                     <div class="thanks-img">
                         <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:  100%;">
                     </div>
-                    <h2 class="thanks-title">
-                        <div class="thanks-title-container">
-                            Pronto! Agradecemos pela participação e até em breve.
+                    
+                    <div class="container thanks-title">
+                        <div class="row">
+                            <div class="col-md-8">
+                                Pronto! Agradecemos pela participação e até em breve.
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-sucess" type="submit" class="thanks-btn">
+                                    Enviar
+                                </button>
+                            </div>
                         </div>
-                        <div class="thanks-btn-container">
-                            <button class="btn btn-sucess" type="submit" class="thanks-btn">
-                                Enviar
-                            </button>
-                        </div>
-                    </h2>
+                    </div>
                 </div>
             </ng-template>
         </form>

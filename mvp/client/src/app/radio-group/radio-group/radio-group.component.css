@@ -1,5 +1,5 @@
 .questions{
-    margin-top: 15%;
+    margin-top: 10%;
 }
 .question{
     vertical-align: middle;
@@ -9,11 +9,20 @@
     box-shadow: 0 0 23px -5px black;
     border: none;
     border-radius: 5px;
-    margin-top: 1%;
 }
 
-@media only screen and (max-device-width: 768px){}
+@media only screen and (max-device-width: 768px){
 
-.questions{
-    display: flex;
+    .questions{
+        display: flex;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    .options{
+        margin-top: 5%;
+    }
+    
 }
+
