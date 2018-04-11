@@ -10,8 +10,9 @@ row{
 #header{
     background-color: #000;
     justify-content: space-around;   
-    height: 8%;
-    padding-top: 2%
+    height: 12%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 #headerAlign{
@@ -20,6 +21,7 @@ row{
 }
 
 #logo{
+    background-image: url("../img/logo-branca.png");
     justify-content: start;
 	background-repeat: no-repeat;
     background-position: center;   
