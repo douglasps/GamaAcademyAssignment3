@@ -16,61 +16,87 @@ body{
 	width: 180px;
 }
 
-h1{
+.titleStyle{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
-	color: #00cca3;
-	font-size: 1.5em;
+	color: white;
+	font-size: 2em;
 	line-height: 30px;
 	text-align: left;
+	padding-bottom: 5%;
 }
 
-h2{
-	font-family: 'Raleway', sans-serif;
-	color: #000;
-	font-size: 1.3em; 
-	line-height: 30px;
-	text-align: left;	  
-}
-
-h3{
+.textAjust{
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.4em;
 	line-height: 25px;	
-	text-align: left;	
+	text-align: left;
+	text-justify: distribute;	
 }
 
 #gif{
-	float: left;
-	margin-bottom: 20px;
+	width: 100%;
+	height: 100%;
 	flex-shrink: 1;
+	vertical-align: middle;
 }
 
 #backHomePage{
 	border: solid 2px #00cca3;
 	color: #00cca3;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 20px;
 	font-size: 1.5em;
+	font-weight: bold;
+	word-spacing: 3px;
+	width: 100%;
 }
 
 section{
 	margin-bottom: 5%;
 }
+
 .MarginTop{
 	margin-top: 5%;
 }
 
+.ScoreTitle{
+	font-size: 1em;
+}
+
+#scoreMessage{
+	font-size: .9em;
+}
+
 #msgScore{
-	margin-top: 4%;
-	margin-bottom: 4%;
-	width: 100%;
+	width: 90%;
 	border: solid 1px lightgrey;
 	border-radius: 5px;
 	padding: 10px; 
 }
 
+.confLogoFooter1{
+	width: 150px;
+	height: 70px;
+	margin-right: 10px;
+}
 
+.confLogoFooter2{
+	width: 50px;
+	margin-right: 5px;
+}
+
+.main-footer{
+	background-color: #bfbfbf1a;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.imgTitle{
+	background-image: url("../../../assets/images/Thank-You-Page-Background.jpg");
+	background-position: center;
+}
 /*Mobile Style*/
 
 @media only screen and (min-device-width: 768px){
@@ -95,4 +121,19 @@ section{
 	h3{
 		font-size:1.5em;
 	}
+	.alignSection{
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-device-width: 300px){
+
+	#backHomePage{
+		font-size: 1.2em;
+		padding: 10px;
+	}
+	.alignSection{
+		flex-direction: column;
+	}
+
 }
