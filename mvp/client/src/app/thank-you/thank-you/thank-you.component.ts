@@ -15,6 +15,7 @@ import { AuthGuard } from '../../auth/auth.guard';
   templateUrl: './thank-you.component.html',
   styleUrls: ['./thank-you.component.css']
 })
+
 export class ThankYouComponent{
   paramSub: Subscription;
   loading = true;
@@ -29,7 +30,8 @@ export class ThankYouComponent{
     private title: Title,
     public auth: AuthGuard,
     private router: Router,
-  ) { 
+  ) 
+  { 
     this.questionList = this.api.getQuestions$();
     var score = this.questionList.calculateScore();
     this.message = (score.message);

@@ -42,7 +42,6 @@ h3{
 
 #gif{
 	float: left;
-	margin-bottom: 20px;
 	flex-shrink: 1;
 }
 
@@ -50,26 +49,50 @@ h3{
 	border: solid 2px #00cca3;
 	color: #00cca3;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 20px;
 	font-size: 1.5em;
+	font-weight: bold;
+	word-spacing: 3px;
+	width: 100%;
 }
 
 section{
 	margin-bottom: 5%;
 }
+
 .MarginTop{
 	margin-top: 5%;
 }
 
 #msgScore{
-	margin-top: 4%;
-	margin-bottom: 4%;
 	width: 100%;
 	border: solid 1px lightgrey;
 	border-radius: 5px;
 	padding: 10px; 
 }
 
+.alignSection{
+	display: flex;
+	flex-direction: row;
+}
+
+.confLogoFooter1{
+	width: 150px;
+	height: 70px;
+	margin-right: 10px;
+}
+
+.confLogoFooter2{
+	width: 50px;
+	margin-right: 5px;
+}
+
+.main-footer{
+	background-color: #bfbfbf1a;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 /*Mobile Style*/
 
@@ -95,4 +118,19 @@ section{
 	h3{
 		font-size:1.5em;
 	}
+	.alignSection{
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-device-width: 300px){
+
+	#backHomePage{
+		font-size: 1.2em;
+		padding: 10px;
+	}
+	.alignSection{
+		flex-direction: column;
+	}
+
 }
