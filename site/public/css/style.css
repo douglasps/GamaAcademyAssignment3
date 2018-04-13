@@ -23,7 +23,7 @@
 }
 
 #navBar{
-	margin-left: 5%;
+	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 1.5%;
     margin-bottom: 0;		
@@ -105,6 +105,11 @@
 	font-weight: bold;  	
 }
 
+.colorWord{
+	color:#FFF;
+	font-weight: bold;  	
+}
+
 #btnTeste{ 
 	width: 100%;
 }
@@ -154,7 +159,6 @@
     margin-right: 8%;
 }
 
-
 #imgBtn{
 	width: 50px;
 }
@@ -163,7 +167,7 @@ h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
 	color: #00cca3;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 30px;
 	margin-left: 0;
 }
@@ -237,33 +241,53 @@ h3{
 	color: #000 !important;
 }
 
-.colorWord {
-    color: #c3c3c3;
-}
-
 .confLogoFooter1{
-	width: 100px;
-	height: 50px;
+	width: 150px;
+	height: 70px;
+	margin-right: 10px;
 }
 
 .confLogoFooter2{
-	width: 30px;
+	width: 50px;
+	margin-right: 5px;
 }
 
 .main-footer{
-	background-color: #f9f9f9;
-	padding: 2%;
-	vertical-align: middle;
-}
-
-#gif{
-	text-align: center;
-	margin-bottom: 20px;
+	background-color: #bfbfbf1a;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .ajustText{
 	padding-left: 3%;
 	padding-right: 3%;
+}
+
+#confheader{
+	position: absolute;
+	width: 100%;
+	box-shadow: 0px 3px 10px -5px black;
+	left: 0;
+}
+
+#logoSection{
+	max-width: 1000px; 
+	margin: auto !important;
+} 
+
+.TYPConfText1{
+	font-size: 1.4em;
+	padding: 10px;
+}
+
+.TYPConfText2{
+	font-size: 16px;
+}
+
+#TYPmsgBox{
+	border: 2px solid #00cca3;
+	margin-top: 5%
 }
 
 /*Mobile Style*/
@@ -302,7 +326,7 @@ h3{
 	}
 
 	h1{
-        font-size: 30px;
+        font-size: 3em;
         line-height: 45px;
 	}
 
@@ -343,11 +367,6 @@ h3{
 		width: 50px;
 	}
 
-	#gif{
-		width: 100%;
-		text-align: center;
-		margin-bottom: 20px;
-	}
 }
 
 @media only screen and (max-device-width: 400px){
