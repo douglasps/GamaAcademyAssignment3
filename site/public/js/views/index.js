@@ -69,6 +69,7 @@
                         
                         $('.pipz-button').click(() =>{
                             saveInfo(); 
+                           	window.location.href("https://hrtechsolutions.com.br/thankyou.html");
                         });
 					}
 				}
