@@ -71,7 +71,13 @@
 }
 
 .thanks-btn{
-    padding: 5px 30px;background-color: #8dda8d; color: white;font-weight: 600;
+    padding: 5px 20px; 
+    background-color: #8dda8d; 
+    color: white;
+    font-weight: 600;
+    border:none;
+    border-radius: 3px;
+    margin-top: 10px;
 }
 
 .message-container{

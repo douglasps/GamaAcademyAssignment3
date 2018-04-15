@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
-    path: 'thankyou',
+    path: 'testecompleto',
     loadChildren: './thank-you/thank-you.module#ThankYouModule',
     canActivate: [
       AuthGuard
