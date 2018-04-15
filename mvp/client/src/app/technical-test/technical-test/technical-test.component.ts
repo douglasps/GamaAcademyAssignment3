@@ -53,7 +53,7 @@ export class TechnicalTestComponent implements OnInit {
 
     if(valid){
       this.api.saveQuestions();     
-      this.router.navigateByUrl('thankyou');
+      this.router.navigateByUrl('testecompleto');
     }
   }
 }
