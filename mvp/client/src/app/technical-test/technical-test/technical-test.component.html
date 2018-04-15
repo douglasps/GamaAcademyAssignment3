@@ -11,8 +11,6 @@
         </ng-template>
     </div>
 
-    <div class="scheduled-time">Tempo previsto: 7:00 min</div>
-
     <div class="container-questions">
         <form (submit)="submiteTechnicalTest($event)" class="w-100">
             <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
