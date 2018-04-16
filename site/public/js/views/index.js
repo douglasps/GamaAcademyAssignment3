@@ -2,7 +2,8 @@
     var leadDal;
     $(document).ready(function() {
         initializePipzForm();
-        initializePipzTracker();
+		initializePipzTracker();
+
     });
 
     function saveInfo(){
