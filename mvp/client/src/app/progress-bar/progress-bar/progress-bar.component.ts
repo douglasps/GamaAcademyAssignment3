@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class ProgressBarComponent {
   @Input() position: number = 0;
-  @Input() total: number = 12;
+  @Input() total: number = 10;
 
   getPositions(){
     let count = this.position < this.total ? this.position + 1 : this.total;
