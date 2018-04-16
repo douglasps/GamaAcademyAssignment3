@@ -49,33 +49,81 @@ export class ApiService {
   private _generateQuestionList(){
     var group = 0; 
     var questions : Question[] = [
-      new Question('Lead são as pessoas e empresas interessadas em um determinado produto ou serviço?',
-        0, 
+      new Question('Qual alternativa abaixo NÃO contém todos os termos associados a área de vendas?',
+        4, 
         [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
+          new Option('Call Plan, SDR, MQL e Prospect.', 0, `${++group}`), 
+          new Option('Cadência, Inside Sales, Champion Letter e SLA.', 1, `${group}`),
+          new Option('Call Plan, SDR, Inside Sales e SAL.', 2, `${group}`),
+          new Option('Cadência, Champion Letter, Prospect e SAL.', 3, `${group}`),
+          new Option('MFV, Lead Time, Deal e Query.', 4, `${group}`)
         ]),
-      new Question('Qual da opções com estágios de vendas a seguir estão na ordem correta?',
-        1,
-        [
-          new Option('Conexão -> qualificação -> proposta -> demo -> fechamento', 0, `${++group}`), 
-          new Option('Conexão -> qualificação -> demo -> propostas -> fechamento', 1, `${group}`),
-          new Option('Conexão -> proposta -> demo -> qualificação -> fechamento', 2, `${group}`)
-        ]),
-      new Question('A cadência high touch é ligada às pesquisas breves e interações leves?',
-        1,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
-        ]),
-      new Question('Qual das alternativas abaixo fazem parte da cadência de atividades?',
+
+      new Question('Os três perfis de vendedor mais conhecidos são: Ativista, Moderador e Comunicativo. A afirmação anterior está:',
         0,
         [
-          new Option('Pesquisa e prospecção', 0, `${++group}`), 
-          new Option('Pesquisa e conexão', 1, `${group}`),
-          new Option('Conexão e Solução ideal', 2, `${group}`),
+          new Option('Incorreta', 0, `${++group}`), 
+          new Option('Correta', 1, `${group}`)
         ]),
-      new Question('Qual a cadência equivalente ao quadrante abaixo?',
+
+      new Question('Selecione a alternativa que completa a frase de forma correta."A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____.',
+        2,
+        [
+          new Option('Descoberta, Account Executive, Lead, Verificação, IMC, Customer Success.', 0, `${++group}`), 
+          new Option('Champion Letter, SDR, Visitante, CheckList, Buyer Persona, Account Executive.', 1, `${group}`),
+          new Option('Cadência, SDR, Lead, Qualificação, ICP, Account Executive.', 2, `${group}`),
+          new Option('Cadência, MQL, Lead, Qualificação, IMC, SDR.', 3, `${group}`),
+          new Option('Descoberta, Account Executive, Visitante, Qualificação, ICP, SDR.', 4, `${group}`)
+        ]),
+
+      new Question ('Assinale a alternativa que contém todas as afirmações verdadeiras. I)BANT é a abreviação de: Business, Authority, Native e Time. II)ICP representa os melhores potenciais clientes de uma empresa. III)"MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". IV) SPIN é um processo de desconto regressivo muito utilizado para fechar vendas. V) Cold Email é um e-mail enviado após uma venda não ser concretizada. VI) Breakup é um e-mail de última tentativa de contato com o lead.',
+        2,
+        [
+          new Option('I, II, V.', 0, `${++group}`), 
+          new Option('IV, V, III.', 1, `${group}`),
+          new Option('II, III, VI.', 2, `${group}`),
+          new Option('IV, V, VI.', 3, `${group}`),
+          new Option('nenhum das alternativas anteriores.', 4, `${group}`)
+        ]),
+
+      new Question('Qual das opções segue a ordem correta do Funil de Vendas:',
+        0,
+        [
+          new Option('Conexão -> Qualificação -> Demo -> Propostas -> Fechamento.', 0, `${++group}`), 
+          new Option('Qualificação -> Demo -> Conexão -> Proposta -> Fechamento.', 1, `${group}`),
+          new Option('Qualificação -> Conexão -> Demo -> Proposta -> Fechamento.', 2, `${group}`),
+          new Option('Conexão -> Qualificação -> Propostas -> Demo -> Fechamento.', 3, `${group}`),
+          new Option('nenhuma das alternativas anteriores.', 4, `${group}`)
+        ]),
+
+      new Question('SLA entre SDRs e Account Executives são regras estabelecidas em conjuntos por ambas partes durante todo o processo de abordagem comercial. A afirmação anterior está:',
+        0,
+        [
+          new Option('Correta', 0, `${++group}`), 
+          new Option('Incorreta', 1, `${group}`)
+        ]),
+
+      new Question('Assinale a alternativa correta: i)Seeds são leads que vieram de indicações de pessoas que já são cliente de uma empresa. ii)Spears são leads que vieram através do Inbound Marketing. iii)Nets são leads capturados de forma Offline.',
+        2,
+        [
+          new Option('i, ii e iii', 0, `${++group}`), 
+          new Option('Apenas a i', 1, `${group}`),
+          new Option('i e ii', 2, `${group}`),
+          new Option('Apenas a iii', 2, `${group}`),
+          new Option('nenhuma das alternativas anteriores.', 2, `${group}`)
+        ]),
+
+      new Question('GPCT-CI é um dos mais famosos frameworks de qualificação de leads usado em abordagens comerciais. Assinale a alternativa que contém o nome e a explicação correta:',
+        2,
+        [
+          new Option('Goals (Objetivo): objetivo que o vendedor possui durante a call.', 0, `${++group}`), 
+          new Option('Patience (Paciência): representa a paciência que o prospect demonstra durante a abordagem comercial.', 1, `${group}`),
+          new Option('Challenges (Desafios): representa os desafios que o prospect possui na empresa dele e podem ser explorados na abordagem comercial.', 2, `${group}`),
+          new Option('Time (Tempo): representa o tempo máximo que o vendedor deve ficar em call.', 3, `${group}`),
+          new Option('Insurance (Seguro): demonstra o quão seguro o prospect está para fechar uma venda.', 4, `${group}`),
+        ]),
+
+        new Question('Qual a cadência equivalente ao quadrante abaixo?',
         2,
         [
           new Option('Medium touch', 0, `${++group}`), 
@@ -83,49 +131,15 @@ export class ApiService {
           new Option('High touch', 2, `${group}`),
         ],
         'img-cadencia'),
-      new Question('Quanto aos leads, o segmento que diz respeito aos seeds é:',
+
+      new Question('Assinale a imagem que contém a ordem correta para os critérios de Segmentação do ICP:',
         1,
         [
-          new Option('Ações de marketing, uso das redes sociais', 0, `${++group}`), 
-          new Option('Orgânicos, com indicações', 1, `${group}`),
-          new Option('Outbound, perfil de cliente ideal', 2, `${group}`),
-        ]),
-      new Question('A sigla ICP significa Ideal Costumer Profile?',
-        0,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
-        ]),
-      new Question('Quais são os três principais tipos de vendedores?',
-        2,
-        [
-          new Option('Carismático, sistemático e de processos', 0, `${++group}`), 
-          new Option('Sistemático, ativista e motivador', 1, `${group}`),
-          new Option('Carismático, ativista e de processos', 2, `${group}`),
-        ]),
-      new Question('Hunters são profissionais que prospectam, entram em contato e realizam parte da qualificação de leads?',
-        0,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
-        ]),
-      new Question('Buyer Personas é o público alvo que se deseja atingir.',
-        1,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
-        ]),
-      new Question('O Elevator Pitch é poder criar um discurso de convencimento que funcione e seja breve.',
-        0,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
-        ]),
-      new Question('Os passo a passo de uma call plan é organização da agenda, definição de objetivos e definição do sucesso.',
-        0,
-        [
-          new Option('Certo', 0, `${++group}`), 
-          new Option('Errado', 1, `${group}`)
+          new Option('img-funil0', 0, `${++group}`), 
+          new Option('img-funil1', 1, `${group}`),
+          new Option('img-funil2', 2, `${group}`),
+          new Option('img-funil3', 3, `${group}`),
+          new Option('img-funil4', 4, `${group}`)
         ]),
       ];
 
