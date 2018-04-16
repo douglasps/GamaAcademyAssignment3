@@ -1,13 +1,13 @@
 //email, nome, datahora
 class LeadsCsvExport{
     constructor(){
-        this._LeadDal = new LeadDal();
+        this._dalLead = new LeadDal();
     }
 
     export(){
         let csvContent = "data:text/csv;charset=utf-8,";
         csvContent += "email, nome, data_hora\r\n";
-        this._BaseDal.getAllLeads()
+        this._dalLead.getAllLeads()
         .then(items => {
             items.forEach(i =>{
                 let columns = [i.email, i.fullName, DateHelper.dateToText(i.datetime)];
