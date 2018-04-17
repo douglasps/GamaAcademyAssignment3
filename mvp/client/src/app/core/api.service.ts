@@ -72,6 +72,7 @@ export class ApiService {
         ]),
 
       new Question(`Selecione a alternativa que completa a frase de forma correta.
+
       "A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____.`,
         2,
         [
@@ -83,9 +84,10 @@ export class ApiService {
         ]),
 
       new Question (`Assinale a alternativa que contém todas as afirmações verdadeiras. 
-      I)BANT é a abreviação de: Business, Authority, Native e Time.
-      II)ICP representa os melhores potenciais clientes de uma empresa.
-      III)"MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". 
+
+      I) BANT é a abreviação de: Business, Authority, Native e Time.
+      II) ICP representa os melhores potenciais clientes de uma empresa.
+      III) "MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". 
       IV) SPIN é um processo de desconto regressivo muito utilizado para fechar vendas. 
       V) Cold Email é um e-mail enviado após uma venda não ser concretizada. 
       VI) Breakup é um e-mail de última tentativa de contato com o lead.`,
@@ -117,9 +119,12 @@ export class ApiService {
         ]),
 
       new Question(`Assinale a alternativa correta: 
-      i)Seeds são leads que vieram de indicações de pessoas que já são cliente de uma empresa. 
-      ii)Spears são leads que vieram através do Inbound Marketing. 
-      iii)Nets são leads capturados de forma Offline.`,
+
+      i) Seeds são leads que vieram de indicações de pessoas que já são cliente de uma empresa. 
+
+      ii) Spears são leads que vieram através do Inbound Marketing. 
+
+      iii) Nets são leads capturados de forma Offline.`,
         2,
         [
           new Option('i, ii e iii', 0, `${++group}`), 
