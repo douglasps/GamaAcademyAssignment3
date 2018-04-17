@@ -23,6 +23,9 @@ export class ThankYouComponent{
   model;
   questionList: QuestionList;
   message: string;
+  messageAreaPreVendas: string;
+  messageAreaVendas: string;
+  messageTecnicas: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,6 +38,9 @@ export class ThankYouComponent{
     this.questionList = this.api.getQuestions$();
     var score = this.questionList.calculateScore();
     this.message = (score.message);
+    //this.messageAreaPreVendas = ();
+    //this.messageAreaVendas = ();
+    //this.messageTecnicas = ();
   }
 
   getPageTitle(): string {
