@@ -1,8 +1,11 @@
-<label class="confLabel">
-         <input type='radio' 
-            #myRadio
-            [name]="option.group"  
-            [value]="option.value"
-            (click)="onRadioClicked(myRadio)">
+<label class="confLabel d-flex align-items-center">
+    
+    <input type='radio' 
+        class="d-none"
+        #myRadio
+        [name]="option.group"  
+        [value]="option.value"
+        (click)="onRadioClicked(myRadio)">
+    <div class="{{ option.style }}"></div>
     {{option.text}} 
 </label>

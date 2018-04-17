@@ -39,6 +39,10 @@ export class ApiService {
   }
 
   saveQuestions(){
+    if(this.token && this.token.token)
+    {
+      this._questionList.email = this.token.token.email;
+    }
     this._dal.save(this._questionList);
   }
 
@@ -148,11 +152,11 @@ export class ApiService {
       new Question('Assinale a imagem que contém a ordem correta para os critérios de Segmentação do ICP:',
         1,
         [
-          new Option('img-funil1', 0, `${++group}`), 
-          new Option('img-funil2', 1, `${group}`),
-          new Option('img-funil3', 2, `${group}`),
-          new Option('img-funil4', 3, `${group}`),
-          new Option('img-funil5', 4, `${group}`)
+          new Option('', 0, `${++group}`, 'img-funil1'), 
+          new Option('', 1, `${group}`, 'img-funil2'),
+          new Option('', 2, `${group}`, 'img-funil3'),
+          new Option('', 3, `${group}`, 'img-funil4'),
+          new Option('', 4, `${group}`, 'img-funil5')
         ]
       ),
       ];

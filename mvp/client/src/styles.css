@@ -23,6 +23,39 @@ a.text-primary:hover {
   margin-bottom: 5px;
 }
 
+.img-funil1,
+.img-funil2,
+.img-funil3,
+.img-funil4,
+.img-funil5{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;	
+  width: 100%;
+  height: 200px;
+  margin-bottom: 5px;
+}
+
+.img-funil1{
+  background-image: url('assets/images/funil1.jpg');
+}
+
+.img-funil2{
+  background-image: url('assets/images/funil2.jpg');
+}
+
+.img-funil3{
+  background-image: url('assets/images/funil3.jpg');
+}
+
+.img-funil4{
+  background-image: url('assets/images/funil4.jpg');
+}
+
+.img-funil5{
+  background-image: url('assets/images/funil5.jpg');
+}
+
 .required::before {
   content: "* Por favor selecione uma opção";
   padding-right: 8px;

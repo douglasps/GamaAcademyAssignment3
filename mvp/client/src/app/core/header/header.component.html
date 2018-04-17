@@ -1,12 +1,12 @@
-<nav class="nav justify-content-between mb-3 header">
+<nav class="nav justify-content-between header">
   <div class="d-flex align-items-center">
   </div>
-  <div class="ml-3">
-    <ng-template [ngIf]="token.token">
+  <ng-template [ngIf]="token.token">
+  <div class="login-container">
       <small>{{ token.token.email }}</small>
       <button
-      class="btn btn-danger btn-sm"
+      class="btn btn-danger btn-sm ml-3"
       (click)="logout()">Log Out</button>
-    </ng-template>
   </div>
+  </ng-template>
 </nav>

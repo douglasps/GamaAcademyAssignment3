@@ -1,6 +1,5 @@
 .header{
     background-color: cadetblue;
-    padding: 10px;
     color:  white;
 }
 
@@ -11,3 +10,6 @@ img {
 .loading { line-height: 31px; }
 .home-link { color: #212529; }
 .home-link:hover { text-decoration: none; }
+.login-container{
+    padding: 10px;
+}

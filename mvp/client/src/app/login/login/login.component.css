@@ -21,6 +21,7 @@ row{
     justify-content: space-between;
     vertical-align: middle;
     padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
 #logo{
@@ -39,6 +40,8 @@ row{
 
 #ImageBack{
     background-image: url("../img/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 80%;
     width: 100%;
 }
