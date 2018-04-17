@@ -15,6 +15,14 @@ export class QuestionList {
         , 0);
         return new Score(score, this.questions.length);
     }
+
+    calculaAreaPreVendas(){   
+           
+    }
+    calculaAreaVendas(){
+    }
+    calculaAreaTecnica(){
+    }
 }  
 
 export class Score{
@@ -43,5 +51,60 @@ export class Score{
         if(score > 2)
             return 'Segundo os resultados do formulário respondido, você se encaixa no nível básico quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você tem pouca noção sobre Inside sales!';
         return 'Segundo os resultados do formulário respondido, você se encaixa no nível iniciante quando falamos em Inside sales, forma que vem sendo utilizado para complementar os novos processos de vendas, focados na solução de problemas de clientes, otimização do trabalho dos vendedores, aumento de faturamento e drástica redução de custos. Este é muito implementado em empresas que trabalham com tecnologia e inovação. Você ainda sabe pouco sobre Inside sales!';
+    }
+}
+
+export class AreaPreVendas{
+    areaPreVendas: number;
+    messageAreaPreVendas: string;
+
+    constructor(areaPreVendas: number, total: number){
+        this.areaPreVendas = areaPreVendas;
+        let level = this.getAreaPreVendas(areaPreVendas);
+        this.messageAreaPreVendas = `Você teve "${ level }"% de aproveitamento em Pré-vendas!`
+    }
+
+    private getAreaPreVendas(areaPreVendas:number){
+        return areaPreVendas > 3 ? '100'
+            :areaPreVendas > 2 ? '75'
+            :areaPreVendas > 1 ? '50'
+            :areaPreVendas > 0 ? '25'
+            :'0';
+    }
+}
+
+export class AreaVendas{
+    areaVendas: number;
+    messageAreaVendas: string;
+
+    constructor(areaVendas: number, total: number){
+        this.areaVendas = areaVendas;
+        let level = this.getAreaVendas(areaVendas);
+        this.messageAreaVendas = `Você teve "${ level }"% de aproveitamento em Vendas!`
+    }
+
+    private getAreaVendas(areaVendas:number){
+        return areaVendas > 2 ? '100'
+            :areaVendas > 1 ? '66,6'
+            :areaVendas > 0 ? '33,3'
+            :'0';
+    }
+}
+
+export class AreaTecnica{
+    areaTecnica: number;
+    messageAreaTecnica: string;
+
+    constructor(areaTecnica: number, total: number){
+        this.areaTecnica = areaTecnica;
+        let level = this.getAreaTecnica(areaTecnica);
+        this.messageAreaTecnica = `Você teve "${ level }"% de aproveitamento em Técnicas de Vendas!`
+    }
+
+    private getAreaTecnica(areaTecnica:number){
+        return areaTecnica > 2 ? '100'
+            :areaTecnica > 1 ? '66,6'
+            :areaTecnica > 0 ? '33,3'
+            :'0';
     }
 }
