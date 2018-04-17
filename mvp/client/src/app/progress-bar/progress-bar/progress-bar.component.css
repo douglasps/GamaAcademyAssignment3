@@ -14,7 +14,7 @@
 
 .progress-bar .progress-bar-item{
     height: 30px;
-    width: 8.33%;
+    width: 10%;
     background-color: transparent;
     transition: ease-in-out 0.3s;
     border-radius: 5px;

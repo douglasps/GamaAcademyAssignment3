@@ -135,11 +135,11 @@ export class ApiService {
       new Question('Assinale a imagem que contém a ordem correta para os critérios de Segmentação do ICP:',
         1,
         [
-          new Option('img-funil0', 0, `${++group}`), 
-          new Option('img-funil1', 1, `${group}`),
-          new Option('img-funil2', 2, `${group}`),
-          new Option('img-funil3', 3, `${group}`),
-          new Option('img-funil4', 4, `${group}`)
+          new Option('img-funil1', 0, `${++group}`), 
+          new Option('img-funil2', 1, `${group}`),
+          new Option('img-funil3', 2, `${group}`),
+          new Option('img-funil4', 3, `${group}`),
+          new Option('img-funil5', 4, `${group}`)
         ]),
       ];
 
