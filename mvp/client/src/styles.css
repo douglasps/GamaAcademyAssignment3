@@ -28,3 +28,5 @@ a.text-primary:hover {
   padding-right: 8px;
   color: red;
 }
+
+.multi-lines-text { white-space: pre-line; }

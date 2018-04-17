@@ -66,7 +66,8 @@ export class ApiService {
           new Option('Correta', 1, `${group}`)
         ]),
 
-      new Question('Selecione a alternativa que completa a frase de forma correta."A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____.',
+      new Question(`Selecione a alternativa que completa a frase de forma correta.
+      "A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____.`,
         2,
         [
           new Option('Descoberta, Account Executive, Lead, Verificação, IMC, Customer Success.', 0, `${++group}`), 
@@ -76,7 +77,13 @@ export class ApiService {
           new Option('Descoberta, Account Executive, Visitante, Qualificação, ICP, SDR.', 4, `${group}`)
         ]),
 
-      new Question ('Assinale a alternativa que contém todas as afirmações verdadeiras. I)BANT é a abreviação de: Business, Authority, Native e Time. II)ICP representa os melhores potenciais clientes de uma empresa. III)"MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". IV) SPIN é um processo de desconto regressivo muito utilizado para fechar vendas. V) Cold Email é um e-mail enviado após uma venda não ser concretizada. VI) Breakup é um e-mail de última tentativa de contato com o lead.',
+      new Question (`Assinale a alternativa que contém todas as afirmações verdadeiras. 
+      I)BANT é a abreviação de: Business, Authority, Native e Time. 
+      II)ICP representa os melhores potenciais clientes de uma empresa. 
+      III)"MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". 
+      IV) SPIN é um processo de desconto regressivo muito utilizado para fechar vendas. 
+      V) Cold Email é um e-mail enviado após uma venda não ser concretizada. 
+      VI) Breakup é um e-mail de última tentativa de contato com o lead.`,
         2,
         [
           new Option('I, II, V.', 0, `${++group}`), 
