@@ -59,7 +59,8 @@ export class ApiService {
           new Option('MFV, Lead Time, Deal e Query.', 4, `${group}`)
         ]),
 
-      new Question('Os três perfis de vendedor mais conhecidos são: Ativista, Moderador e Comunicativo. A afirmação anterior está:',
+      new Question(`Os três perfis de vendedor mais conhecidos são: Ativista, Moderador e Comunicativo. 
+      A afirmação anterior está:`,
         0,
         [
           new Option('Incorreta', 0, `${++group}`), 
@@ -78,8 +79,8 @@ export class ApiService {
         ]),
 
       new Question (`Assinale a alternativa que contém todas as afirmações verdadeiras. 
-      I)BANT é a abreviação de: Business, Authority, Native e Time. 
-      II)ICP representa os melhores potenciais clientes de uma empresa. 
+      I)BANT é a abreviação de: Business, Authority, Native e Time.
+      II)ICP representa os melhores potenciais clientes de uma empresa.
       III)"MQL" é uma etapa do Funil de Vendas que ocorre antes da etapa "SAL". 
       IV) SPIN é um processo de desconto regressivo muito utilizado para fechar vendas. 
       V) Cold Email é um e-mail enviado após uma venda não ser concretizada. 
@@ -103,14 +104,18 @@ export class ApiService {
           new Option('nenhuma das alternativas anteriores.', 4, `${group}`)
         ]),
 
-      new Question('SLA entre SDRs e Account Executives são regras estabelecidas em conjuntos por ambas partes durante todo o processo de abordagem comercial. A afirmação anterior está:',
+      new Question(`SLA entre SDRs e Account Executives são regras estabelecidas em conjuntos por ambas partes durante todo o processo de abordagem comercial. 
+      A afirmação anterior está:`,
         0,
         [
           new Option('Correta', 0, `${++group}`), 
           new Option('Incorreta', 1, `${group}`)
         ]),
 
-      new Question('Assinale a alternativa correta: i)Seeds são leads que vieram de indicações de pessoas que já são cliente de uma empresa. ii)Spears são leads que vieram através do Inbound Marketing. iii)Nets são leads capturados de forma Offline.',
+      new Question(`Assinale a alternativa correta: 
+      i)Seeds são leads que vieram de indicações de pessoas que já são cliente de uma empresa. 
+      ii)Spears são leads que vieram através do Inbound Marketing. 
+      iii)Nets são leads capturados de forma Offline.`,
         2,
         [
           new Option('i, ii e iii', 0, `${++group}`), 
@@ -120,7 +125,8 @@ export class ApiService {
           new Option('nenhuma das alternativas anteriores.', 2, `${group}`)
         ]),
 
-      new Question('GPCT-CI é um dos mais famosos frameworks de qualificação de leads usado em abordagens comerciais. Assinale a alternativa que contém o nome e a explicação correta:',
+      new Question(`GPCT-CI é um dos mais famosos frameworks de qualificação de leads usado em abordagens comerciais. 
+      Assinale a alternativa que contém o nome e a explicação correta:`,
         2,
         [
           new Option('Goals (Objetivo): objetivo que o vendedor possui durante a call.', 0, `${++group}`), 
@@ -147,7 +153,8 @@ export class ApiService {
           new Option('img-funil3', 2, `${group}`),
           new Option('img-funil4', 3, `${group}`),
           new Option('img-funil5', 4, `${group}`)
-        ]),
+        ]
+      ),
       ];
 
       let token = this.token.token;

@@ -1,16 +1,22 @@
 .questions{
     margin-top: 10%;
 }
+
+h2{
+    font-size: 1.3em;
+}
+
 .question{
     vertical-align: middle;
-    font-size: 1.3em;
+    width: 100%;
 }
 .options{
     padding: 20px;
     box-shadow: 0 0 23px -5px black;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1em;
+    width: 100%;
 }
 .question.style{
     font-size: 1.3em;
@@ -18,16 +24,11 @@
 
 @media only screen and (max-device-width: 768px){
 
-    .questions{
-        display: flex;
-    }
-    
     h2 {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .options{
         margin-top: 5%;
-    }
-    
+    }    
 }
 
