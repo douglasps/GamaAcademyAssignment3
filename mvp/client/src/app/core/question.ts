@@ -6,9 +6,9 @@ export class Question {
   options: Option[];
   style: string;
   selectionedOption: number = -1;
-  area: number;
+  area: string;
 
-  constructor(question: string, rightOption: number, options: Option[], style: string = null, area: number){
+  constructor(question: string, rightOption: number, options: Option[], style: string = null, area: string){
     this.question = question;
     this.rightOption = rightOption;
     this.options = options;

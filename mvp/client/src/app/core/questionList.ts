@@ -10,28 +10,34 @@ export class QuestionList {
     }
 
     calculateScore(){
-        let score = this.questions.reduce((count, question) => 
-            count += question.rightOption == question.selectionedOption ? 1 : 0
-        , 0);
-        return new Score(score, this.questions.length);
-    }
+        let scoreByArea = {};
+        let count = 0;
+        this.questions.forEach(question =>{
+            if(!scoreByArea[question.area])
+                scoreByArea[question.area] = { score: 0, total: 0 };
 
-    calculaAreaPreVendas(){   
-           
-    }
-    calculaAreaVendas(){
-    }
-    calculaAreaTecnica(){
+            scoreByArea[question.area].total += 1;
+            if(question.rightOption == question.selectionedOption){
+                count += 1;
+                scoreByArea[question.area].score += 1;
+            }
+        });
+        
+        let areas = Object.keys(scoreByArea).map(key => 
+            new Area(key, scoreByArea[key].score, scoreByArea[key].total));
+        return new Score(count, this.questions.length, areas);
     }
 }  
 
 export class Score{
     score: number;
     message: string;
+    areas: Area[];
 
-    constructor(score: number, total: number){
+    constructor(score: number, total: number, areas : Area[]){
         this.score = score;
         let level = this.getLevel(score);
+        this.areas = areas;
         this.message = `O seu nível é "${ level }" (${score}/${total}) ! 
         ${ this.getMessage(score) }`
     }
@@ -54,57 +60,22 @@ export class Score{
     }
 }
 
-export class AreaPreVendas{
-    areaPreVendas: number;
-    messageAreaPreVendas: string;
+export class Area{
+    name: string;
+    score: number;
+    total: number;
 
-    constructor(areaPreVendas: number, total: number){
-        this.areaPreVendas = areaPreVendas;
-        let level = this.getAreaPreVendas(areaPreVendas);
-        this.messageAreaPreVendas = `Você teve "${ level }"% de aproveitamento em Pré-vendas!`
+    constructor(name: string, score: number, total: number){
+        this.name = name;
+        this.score = score;
+        this.total = total;
     }
 
-    private getAreaPreVendas(areaPreVendas:number){
-        return areaPreVendas > 3 ? '100'
-            :areaPreVendas > 2 ? '75'
-            :areaPreVendas > 1 ? '50'
-            :areaPreVendas > 0 ? '25'
-            :'0';
-    }
-}
-
-export class AreaVendas{
-    areaVendas: number;
-    messageAreaVendas: string;
-
-    constructor(areaVendas: number, total: number){
-        this.areaVendas = areaVendas;
-        let level = this.getAreaVendas(areaVendas);
-        this.messageAreaVendas = `Você teve "${ level }"% de aproveitamento em Vendas!`
+    get percentual(){
+        return this.score > 0 ? this.score/this.total : 0;
     }
 
-    private getAreaVendas(areaVendas:number){
-        return areaVendas > 2 ? '100'
-            :areaVendas > 1 ? '66,6'
-            :areaVendas > 0 ? '33,3'
-            :'0';
-    }
-}
-
-export class AreaTecnica{
-    areaTecnica: number;
-    messageAreaTecnica: string;
-
-    constructor(areaTecnica: number, total: number){
-        this.areaTecnica = areaTecnica;
-        let level = this.getAreaTecnica(areaTecnica);
-        this.messageAreaTecnica = `Você teve "${ level }"% de aproveitamento em Técnicas de Vendas!`
-    }
-
-    private getAreaTecnica(areaTecnica:number){
-        return areaTecnica > 2 ? '100'
-            :areaTecnica > 1 ? '66,6'
-            :areaTecnica > 0 ? '33,3'
-            :'0';
+    get message(){
+        return `Você teve "${ (Math.round(this.percentual * 100)).toFixed(2) }"% de aproveitamento em ${ this.name }!`;
     }
 }

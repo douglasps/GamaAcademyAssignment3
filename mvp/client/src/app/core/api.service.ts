@@ -61,7 +61,9 @@ export class ApiService {
           new Option('Call Plan, SDR, Inside Sales e SAL.', 2, `${group}`),
           new Option('Cadência, Champion Letter, Prospect e SAL.', 3, `${group}`),
           new Option('MFV, Lead Time, Deal e Query.', 4, `${group}`)
-        ],null,1),
+        ],
+        null,
+        'Pré-vendas'),
 
       new Question(`Os três perfis de vendedor mais conhecidos são: Ativista, Moderador e Comunicativo. 
       A afirmação anterior está:`,
@@ -69,7 +71,9 @@ export class ApiService {
         [
           new Option('Incorreta', 0, `${++group}`), 
           new Option('Correta', 1, `${group}`)
-        ],null,1),
+        ],
+        null,
+        'Pré-vendas'),
 
       new Question(`Selecione a alternativa que completa a frase de forma correta.
 
@@ -81,7 +85,9 @@ export class ApiService {
           new Option('Cadência, SDR, Lead, Qualificação, ICP, Account Executive.', 2, `${group}`),
           new Option('Cadência, MQL, Lead, Qualificação, IMC, SDR.', 3, `${group}`),
           new Option('Descoberta, Account Executive, Visitante, Qualificação, ICP, SDR.', 4, `${group}`)
-        ],null,1),
+        ],
+        null,
+        'Pré-vendas'),
 
       new Question (`Assinale a alternativa que contém todas as afirmações verdadeiras. 
 
@@ -98,7 +104,9 @@ export class ApiService {
           new Option('II, III, VI.', 2, `${group}`),
           new Option('IV, V, VI.', 3, `${group}`),
           new Option('nenhum das alternativas anteriores.', 4, `${group}`)
-        ],null,1),
+        ],
+        null,
+        'Pré-vendas'),
 
       new Question('Qual das opções segue a ordem correta do Funil de Vendas:',
         0,
@@ -108,7 +116,9 @@ export class ApiService {
           new Option('Qualificação -> Conexão -> Demo -> Proposta -> Fechamento.', 2, `${group}`),
           new Option('Conexão -> Qualificação -> Propostas -> Demo -> Fechamento.', 3, `${group}`),
           new Option('nenhuma das alternativas anteriores.', 4, `${group}`)
-        ],null,2),
+        ],
+        null,
+        'Vendas'),
 
       new Question(`SLA entre SDRs e Account Executives são regras estabelecidas em conjuntos por ambas partes durante todo o processo de abordagem comercial. 
       A afirmação anterior está:`,
@@ -116,7 +126,9 @@ export class ApiService {
         [
           new Option('Correta', 0, `${++group}`), 
           new Option('Incorreta', 1, `${group}`)
-        ],null,2),
+        ],
+        null,
+        'Vendas'),
 
       new Question(`Assinale a alternativa correta: 
 
@@ -132,7 +144,9 @@ export class ApiService {
           new Option('i e ii', 2, `${group}`),
           new Option('Apenas a iii', 2, `${group}`),
           new Option('nenhuma das alternativas anteriores.', 2, `${group}`)
-        ],null,2),
+        ],
+        null,
+        'Vendas'),
 
       new Question(`GPCT-CI é um dos mais famosos frameworks de qualificação de leads usado em abordagens comerciais. 
       Assinale a alternativa que contém o nome e a explicação correta:`,
@@ -143,7 +157,9 @@ export class ApiService {
           new Option('Challenges (Desafios): representa os desafios que o prospect possui na empresa dele e podem ser explorados na abordagem comercial.', 2, `${group}`),
           new Option('Time (Tempo): representa o tempo máximo que o vendedor deve ficar em call.', 3, `${group}`),
           new Option('Insurance (Seguro): demonstra o quão seguro o prospect está para fechar uma venda.', 4, `${group}`),
-        ],null,3),
+        ],
+        null,
+        'Técnicas de Vendas'),
 
         new Question('Qual a cadência equivalente ao quadrante abaixo?',
         2,
@@ -152,7 +168,8 @@ export class ApiService {
           new Option('Low touch', 1, `${group}`),
           new Option('High touch', 2, `${group}`),
         ],
-        'img-cadencia',3),
+        'img-cadencia',
+        'Técnicas de Vendas'),
 
       new Question('Assinale a imagem que contém a ordem correta para os critérios de Segmentação do ICP:',
         1,
@@ -162,7 +179,9 @@ export class ApiService {
           new Option('', 2, `${group}`, 'img-funil3'),
           new Option('', 3, `${group}`, 'img-funil4'),
           new Option('', 4, `${group}`, 'img-funil5')
-        ],null,3),
+        ],
+        null,
+        'Técnicas de Vendas'),
       ];
 
       let token = this.token.token;

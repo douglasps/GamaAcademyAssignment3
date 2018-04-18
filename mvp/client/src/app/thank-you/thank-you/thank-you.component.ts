@@ -5,7 +5,7 @@ import { ApiService } from '../../core/api.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
-import { QuestionList } from '../../core/questionList';
+import { QuestionList, Score } from '../../core/questionList';
 import { Question } from '../../core/question';
 import {NgForm} from '@angular/forms';
 import { AuthGuard } from '../../auth/auth.guard';
@@ -22,10 +22,7 @@ export class ThankYouComponent{
   error: boolean;
   model;
   questionList: QuestionList;
-  message: string;
-  messageAreaPreVendas: string;
-  messageAreaVendas: string;
-  messageTecnicas: string;
+  score: Score;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,11 +33,7 @@ export class ThankYouComponent{
   ) 
   { 
     this.questionList = this.api.getQuestions$();
-    var score = this.questionList.calculateScore();
-    this.message = (score.message);
-    //this.messageAreaPreVendas = ();
-    //this.messageAreaVendas = ();
-    //this.messageTecnicas = ();
+    this.score = this.questionList.calculateScore();
   }
 
   getPageTitle(): string {
