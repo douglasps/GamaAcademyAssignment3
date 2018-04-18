@@ -72,10 +72,10 @@ export class Area{
     }
 
     get percentual(){
-        return this.score > 0 ? this.score/this.total : 0;
+        return ((this.score > 0 ? this.score/this.total : 0) * 100).toFixed(0);
     }
 
     get message(){
-        return `Você teve "${ (Math.round(this.percentual * 100)).toFixed(2) }"% de aproveitamento em ${ this.name }!`;
+        return `Você teve "${ this.percentual }"% de aproveitamento em ${ this.name }!`;
     }
 }

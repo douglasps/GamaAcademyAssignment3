@@ -13,7 +13,7 @@ import { AuthGuard } from '../../auth/auth.guard';
 @Component({
   selector: 'app-thank-you',
   templateUrl: './thank-you.component.html',
-  styleUrls: ['./thank-you.component.css']
+  styleUrls: ['./thank-you.component.scss']
 })
 
 export class ThankYouComponent{

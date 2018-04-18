@@ -1,52 +1,54 @@
-<body>
+<header>
+    <div id="logoSection" class="container">
+        <img id="logo" src="../../../assets/images/hr-logo.png" alt="HRtechSolutions">
+    </div>
+</header>
 
-    <header>
-        <div id="logoSection" class="container">
-            <img id="logo" src="../../../assets/images/hr-logo.png" alt="HRtechSolutions">
+
+<section>
+    <div id="main-section">
+        <div class="row imgTitle img-responsive">        
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-md-10 col-sm-10 col-xs-1 MarginTop">  
+                <h1 class="titleStyle">Muito obrigado por participar do nosso teste! </h1>
+            </div>
         </div>
-    </header>
-
-    
-    <section>
-        <div id="main-section">
-            <div class="row imgTitle img-responsive">        
-                <div class="col-md-1 col-sm-1 col-xs-1"></div>
-                <div class="col-md-10 col-sm-10 col-xs-1 MarginTop">  
-                    <h1 class="titleStyle">Muito obrigado por participar do nosso teste! </h1>
-                </div>
+        <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-md-10 col-sm-10 col-xs-1 MarginTop">
+                <h3 class="textAjust">Já deu para perceber que você é um profissional de Vendas que corre atrás porque está interessado em avaliar seus conhecimentos. Continuando neste caminho você terá tantos clientes que vai parecer ter mais sucesso que o Jerry Maguire.</h3>  
+                <br/>    
+                <h3 class="textAjust">P.S: Lembre-se não se trata apenas de uma venda, um cliente satisfeito é um cliente fiel!</h3>
             </div>
-            <div class="row">
-                <div class="col-md-1 col-sm-1 col-xs-1"></div>
-                <div class="col-md-10 col-sm-10 col-xs-1 MarginTop">
-                    <h3 class="textAjust">Já deu para perceber que você é um profissional de Vendas que corre atrás porque está interessado em avaliar seus conhecimentos. Continuando neste caminho você terá tantos clientes que vai parecer ter mais sucesso que o Jerry Maguire.</h3>  
-                    <br/>    
-                    <h3 class="textAjust">P.S: Lembre-se não se trata apenas de uma venda, um cliente satisfeito é um cliente fiel!</h3>
-                </div>
+        </div>
+
+        <div class="row">  
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+            <div class="col-md-5 col-sm-10 col-xs-10 MarginTop"> 		
+                <img src="../../../assets/images/Jerry Maguire Money GIF-downsized_large.gif" id="gif">
+            </div> 
+
+            <div id="msgScore" class="col-md-5 col-sm-10 col-xs-10 MarginTop">
+                <h3 class="ScoreTitle">Seu resultado foi:</h3>                   
+                <label id="scoreMessage">{{score.message}}</label>
+                <label *ngFor="let area of score.areas">{{area.message}}</label>
+                <dl>
+                    <dt>
+                        Resultados
+                    </dt>
+                    <dd *ngFor="let area of score.areas" [class]="'percentage percentage-'+area.percentual">{{area.name + ': ' + area.percentual + '%'}}</dd>
+                </dl>
             </div>
+        </div>    
 
-            <div class="row">  
-                <div class="col-md-1 col-sm-1 col-xs-1"></div>
-                <div class="col-md-5 col-sm-10 col-xs-10 MarginTop"> 		
-                    <img src="../../../assets/images/Jerry Maguire Money GIF-downsized_large.gif" id="gif">
-                </div> 
-
-                <div id="msgScore" class="col-md-5 col-sm-10 col-xs-10 MarginTop">
-                    <h3 class="ScoreTitle">Seu resultado foi:</h3>                   
-                    <label id="scoreMessage">{{score.message}}</label>
-                    <label *ngFor="let area of score.areas">{{area.message}}</label>
-                </div>
-            </div>    
-
-            <div class="row MarginTop">
-                <div class="col-md-1 col-sm-1 col-xs-1"></div>    
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 MarginTop"> 
-                    <a href="https://hrtechsolutions.com.br/" id="backHomePage">Ir para a homepage</a>
-                </div>
-            </div>  
+        <div class="row MarginTop">
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>    
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 MarginTop"> 
+                <a href="https://hrtechsolutions.com.br/" id="backHomePage">Ir para a homepage</a>
+            </div>
         </div>  
-    </section>
-</body>
-
+    </div>  
+</section>
 
 <footer>
     <div class="row main-footer">
