@@ -15,3 +15,12 @@ Douglas:
 Responsible for persistence data development code, code to export data to .cvs document and MVP development.
 Ana Paula:
 Responsable for landing page development, including layout and page design and the layout/design of the MVP.
+
+# Landing Page
+[https://hrtechsolutions.com.br/](https://hrtechsolutions.com.br/)
+
+# MVP
+[https://avaliacao.hrtechsolutions.com.br/](https://avaliacao.hrtechsolutions.com.br/)
+
+# CSV
+[Get csv(https://hrtechsolutions.com.br/getcsv.html)]
