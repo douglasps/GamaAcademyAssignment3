@@ -21,7 +21,15 @@
     text-align: center;
     color:  white;
     padding-top: 3px;
-    font-weight:  900;
+    font-weight:  800;
     box-shadow: 2px 2px 12px 0px #000085;
     display: inline-block;
+}
+
+@media only screen and (max-device-width: 768px) 
+{
+    .progress-bar .progress-bar-item{
+        font-weight: 400;
+        font-size: 1em;
+    }    
 }

@@ -31,11 +31,8 @@
             <div id="msgScore" class="col-md-5 col-sm-10 col-xs-10 MarginTop">
                 <h3 class="ScoreTitle">Seu resultado foi:</h3>                   
                 <label id="scoreMessage">{{score.message}}</label>
-                <label *ngFor="let area of score.areas">{{area.message}}</label>
                 <dl>
-                    <dt>
-                        Resultados
-                    </dt>
+                    <dt>O seu aproveitamento foi:</dt>
                     <dd *ngFor="let area of score.areas" [class]="'percentage percentage-'+area.percentual">{{area.name + ': ' + area.percentual + '%'}}</dd>
                 </dl>
             </div>
