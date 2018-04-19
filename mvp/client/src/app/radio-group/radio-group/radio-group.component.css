@@ -1,24 +1,18 @@
 .questions{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 h2{
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
 }
 
 .question{
     vertical-align: middle;
     width: 100%;
+}
 
-}
-.options{
-    padding: 20px;
-    box-shadow: 0 0 23px -5px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    width: 100%;
-}
 .question.style{
     font-size: 1.3em;
 }

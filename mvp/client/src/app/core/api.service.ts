@@ -77,7 +77,7 @@ export class ApiService {
 
       new Question(`Selecione a alternativa que completa a frase de forma correta.
 
-      "A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____.`,
+      "A_____se finaliza quando o_____consegue o primeiro contato com o_____. Caso o processo de_____confirme que o lead está dentro do_____, uma reunião é agendada com o_____."`,
         2,
         [
           new Option('Descoberta, Account Executive, Lead, Verificação, IMC, Customer Success.', 0, `${++group}`), 

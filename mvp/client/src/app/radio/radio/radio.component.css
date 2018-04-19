@@ -1,13 +1,16 @@
 .confLabel{
-    background-color: #8dda8d;
-    width: 94%;
-    padding: 1%;
+    background-color: #70b570;
+    width: 100%;
+    padding: 10px;
     border-radius: 5px;
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 1.7%;
     margin-bottom: 1.7%;
     border: 1px solid transparent;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1em;
 }
 
 .confLabel:hover{

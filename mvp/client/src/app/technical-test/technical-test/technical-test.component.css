@@ -3,6 +3,16 @@
     margin-right: 0;
 }
 
+#TestBackground{
+    max-width: 80%;
+    padding: 3%;
+    margin: 5% auto;
+    border-radius: 10px;
+    box-shadow: 0 0 100px 15px rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
 .btn-back{
     display:  inline-block;
     vertical-align: middle;
@@ -16,8 +26,7 @@
     border-radius: 5px;
     text-align: center;
     color:  white;
-    font-weight:  600;
-    padding-top: 3px;
+    font-weight:  500;
 }
 
 .scheduled-time{
@@ -29,20 +38,14 @@
 }
 
 .progress-container{
-    width: 90%;
+    width: 100%;
     margin-left: 10px;
-}
-
-.btn-back,
-.progress-container{
-    margin-bottom: 5px;
 }
 
 .top-container{
     display: flex;
     flex-wrap: wrap;
     flex-flow: row-reverse;
-    margin-top:7%;
 }
 
 .container-questions{
@@ -50,7 +53,7 @@
     align-items: center;
     align-content: center;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-top: 0!important;
 }
 
 .thanks-img{
@@ -70,7 +73,7 @@
 }
 
 .thanks-btn{
-    padding: 5px 20px; 
+    padding: 10px 20px; 
     background-color: #8dda8d; 
     color: white;
     font-weight: 600;
@@ -78,16 +81,24 @@
     border-radius: 3px;
     margin-top: 10px;
 }
+.text-back{
+    padding-top: 3px;
+}
 
 .message-container{
     display: flex;
     flex-wrap: wrap;
     flex-flow: row;
+    margin-top: 5%;
 }
 
 @media only screen and (max-device-width: 768px) {
     .message-container{
         flex-flow: column;
     }
-    
+
+    #TestBackground{
+        max-width: 90%;
+    }
+
 }
