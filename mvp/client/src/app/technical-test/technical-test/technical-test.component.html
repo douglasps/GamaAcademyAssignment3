@@ -1,44 +1,46 @@
-<div id="TestBackground" class="container w-70 h-80 d-block">
-    <div class="top-container">
-        <div class="progress-container">
-            <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
-        </div>
-        <ng-template [ngIf]="position > 0">
-            <div class="btn-back">
-                <div class="text-back" (click)="back()">VOLTAR</div>
+<div>
+    <div id="TestBackground" class="container w-70 h-70 d-block">
+        <div class="top-container">
+            <div class="progress-container">
+                <app-progress-bar [position]="position" [total]="questionList.questions.length"></app-progress-bar>   
             </div>
-        </ng-template>
-    </div>
+            <ng-template [ngIf]="position > 0">
+                <div class="btn-back">
+                    <div class="text-back" (click)="back()">VOLTAR</div>
+                </div>
+            </ng-template>
+        </div>
 
-    <div class="container-questions">
-        <form (submit)="submiteTechnicalTest($event)" class="w-100 h-100">
-            <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
-                [question]="question"  
-                [number]="i+1"
-                [visible]="groupVisible(i)"
-                (selected)="selectionChanged()">
-            </app-radio-group>
+        <div class="container-questions">
+            <form (submit)="submiteTechnicalTest($event)" class="w-100 h-100">
+                <app-radio-group *ngFor="let question of questionList.questions; let i = index" 
+                    [question]="question"  
+                    [number]="i+1"
+                    [visible]="groupVisible(i)"
+                    (selected)="selectionChanged()">
+                </app-radio-group>
 
-            <ng-template [ngIf]="position == questionList.questions.length">
-                <div class="message-container">
-                    <div class="thanks-img">
-                        <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:100%;">
-                    </div>
-                
-                    <div class="container thanks-title">
-                        <div class="row">
-                            <div class="col-md-7">
-                                Pronto! Agradecemos pela participação e até em breve.
-                            </div>
-                            <div class="col-md-5">
-                                <button class="btn btn-sucess" type="submit" class="thanks-btn">
-                                        Ver Resultado
-                                </button>
+                <ng-template [ngIf]="position == questionList.questions.length">
+                    <div class="message-container">
+                        <div class="thanks-img">
+                            <img src="https://i.imgur.com/A3n1cOA.jpg" style="width:100%;">
+                        </div>
+                    
+                        <div class="container thanks-title">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    Pronto! Agradecemos pela participação e até em breve.
+                                </div>
+                                <div class="col-md-5">
+                                    <button class="btn btn-sucess" type="submit" class="thanks-btn">
+                                            Ver Resultado
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </ng-template>
-        </form>
+                </ng-template>
+            </form>
+        </div>
     </div>
 </div>
