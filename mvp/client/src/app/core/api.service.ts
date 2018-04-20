@@ -63,7 +63,9 @@ export class ApiService {
           new Option('MFV, Lead Time, Deal e Query.', 4, `${group}`)
         ],
         null,
-        'Pré-vendas'),
+        'Pré-vendas',
+        `style="background-image: url('../../../assets/images/background1.jpg')"`
+      ),
 
       new Question(`Os três perfis de vendedor mais conhecidos são: Ativista, Moderador e Comunicativo. 
       A afirmação anterior está:`,
@@ -73,7 +75,8 @@ export class ApiService {
           new Option('Correta', 1, `${group}`)
         ],
         null,
-        'Pré-vendas'),
+        'Pré-vendas', 
+        `style="background-image: url('../../../assets/images/background2.jpg')"`),
 
       new Question(`Selecione a alternativa que completa a frase de forma correta.
 
@@ -87,7 +90,8 @@ export class ApiService {
           new Option('Descoberta, Account Executive, Visitante, Qualificação, ICP, SDR.', 4, `${group}`)
         ],
         null,
-        'Pré-vendas'),
+        'Pré-vendas',
+        `style="background-image: url('../../../assets/images/background3.jpg')"`),
 
       new Question (`Assinale a alternativa que contém todas as afirmações verdadeiras. 
 
@@ -106,7 +110,9 @@ export class ApiService {
           new Option('nenhum das alternativas anteriores.', 4, `${group}`)
         ],
         null,
-        'Pré-vendas'),
+        'Pré-vendas',
+        `style="background-image: url('../../../assets/images/background4.jpg')"`
+      ),
 
       new Question('Qual das opções segue a ordem correta do Funil de Vendas:',
         0,
@@ -118,7 +124,9 @@ export class ApiService {
           new Option('nenhuma das alternativas anteriores.', 4, `${group}`)
         ],
         null,
-        'Vendas'),
+        'Vendas',
+        `style="background-image: url('../../../assets/images/background5.jpg')"`
+      ),
 
       new Question(`SLA entre SDRs e Account Executives são regras estabelecidas em conjuntos por ambas partes durante todo o processo de abordagem comercial. 
       A afirmação anterior está:`,
@@ -128,7 +136,8 @@ export class ApiService {
           new Option('Incorreta', 1, `${group}`)
         ],
         null,
-        'Vendas'),
+        'Vendas',
+        `style="background-image: url('../../../assets/images/background6.jpg')"`),
 
       new Question(`Assinale a alternativa correta: 
 
@@ -146,7 +155,9 @@ export class ApiService {
           new Option('nenhuma das alternativas anteriores.', 2, `${group}`)
         ],
         null,
-        'Vendas'),
+        'Vendas', 
+        `style="background-image: url('../../../assets/images/background7.jpg')"`
+      ),
 
       new Question(`GPCT-CI é um dos mais famosos frameworks de qualificação de leads usado em abordagens comerciais. 
       Assinale a alternativa que contém o nome e a explicação correta:`,
@@ -159,7 +170,9 @@ export class ApiService {
           new Option('Insurance (Seguro): demonstra o quão seguro o prospect está para fechar uma venda.', 4, `${group}`),
         ],
         null,
-        'Técnicas de Vendas'),
+        'Técnicas de Vendas',
+        `style="background-image: url('../../../assets/images/background8.jpg')"`
+      ),
 
         new Question('Qual a cadência equivalente ao quadrante abaixo?',
         2,
@@ -169,7 +182,9 @@ export class ApiService {
           new Option('High touch', 2, `${group}`),
         ],
         'img-cadencia',
-        'Técnicas de Vendas'),
+        'Técnicas de Vendas',
+        `style="background-image: url('../../../assets/images/background9.jpg')"`
+      ),
 
       new Question('Assinale a imagem que contém a ordem correta para os critérios de Segmentação do ICP:',
         1,
@@ -181,7 +196,9 @@ export class ApiService {
           new Option('', 4, `${group}`, 'img-funil5')
         ],
         null,
-        'Técnicas de Vendas'),
+        'Técnicas de Vendas',
+        `style="background-image: url('../../../assets/images/background10.jpg')"`
+      ),
       ];
 
       let token = this.token.token;
