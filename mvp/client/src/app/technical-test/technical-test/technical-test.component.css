@@ -92,6 +92,12 @@
     flex-flow: row;
     margin-top: 5%;
 }
+#imgBackground{
+    background-size:cover; 
+    padding-top:4%; 
+    padding-bottom:16%;
+}
+
 
 @media only screen and (max-device-width: 768px) {
     .message-container{
